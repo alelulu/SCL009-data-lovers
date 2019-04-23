@@ -6,8 +6,8 @@
 // acá va filtrar, cáculo y ordenar.
 
 //ordenando de A-Z
-const pkmnArray = POKEMON.pokemon;
-const orderByName = pkmnArray.sort(name)
+//const pkmnArray = POKEMON.pokemon;
+//const orderByName = pkmnArray.sort(name)
 
 /*
 const example = () => {
