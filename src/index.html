@@ -8,10 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
   </head>
-  <body>
+  <body id="index-page">
     <div id="root">
-      
-        <header>
+      <header>
           <div class="container">
             <div class="row">
               <div class="col">
@@ -33,23 +32,49 @@
                       <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                      <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Ordenar
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a id="pkdx-number"class="dropdown-item" href="#">Número Pokédex</a>
-                        <a id="a-z" class="dropdown-item" href="#">A-Z</a>
-                        <a id="z-a" class="dropdown-item" href="#">Z-A</a>
+                        <button type="button" id="pkdx-number" class="dropdown-item">Número Pokédex</button>
+                        <button type="button" id="a-z" class="dropdown-item">A-Z</button>
+                        <button type="button" id="z-a" class="dropdown-item">Z-A</button>
                       </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Filtrar
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="#">Tipo</a>
-                          <a class="dropdown-item" href="#">Huevo</a>
-                      </li>
+                        <div class="dropdown-menu" id="type-dropdown" aria-labelledby="navbarDropdown">
+                          <button class="dropdown-item">Tipo</button>
+                            <div class="dropdown-menu" aria-labelledby="type-dropdown">
+                              <button type="button" class="dropdown-item type-item" type-name="Bug">Bug</button>
+                              <button type="button" class="dropdown-item type-item" type-name="Dragon">Dragon</button>
+                              <button type="button" class="dropdown-item type-item" type-name="Electric">Electric</button>
+                              <button type="button" class="dropdown-item type-item" type-name="Fighting">Fighting</button>
+                              <button type="button" class="dropdown-item type-item" type-name="Fire">Fire</button>
+                              <button type="button" class="dropdown-item type-item" type-name="Flying">Flying</button>
+                              <button type="button" class="dropdown-item type-item" type-name="Ghost">Ghost</button>
+                              <button type="button" class="dropdown-item type-item" type-name="Grass">Grass</button>
+                              <button type="button" class="dropdown-item type-item" type-name="Ground">Ground</button>
+                              <button type="button" class="dropdown-item type-item" type-name="Ice">Ice</button>
+                              <button type="button" class="dropdown-item type-item" type-name="Normal">Normal</button>
+                              <button type="button" class="dropdown-item type-item" type-name="Poison">Poison</button>
+                              <button type="button" class="dropdown-item type-item" type-name="Psychic">Psychic</button>
+                              <button type="button" class="dropdown-item type-item" type-name="Rock">Rock</button>
+                              <button type="button" class="dropdown-item type-item" type-name="Water">Water</button>
+                            </div>
+                          </div>
+                          <dic class="dropdown-menu" id="egg-dropdown" aria-labelledby="navbarDropdown">
+                            <button type="button" class="dropdown-item dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Huevo</button>
+                          <div class="dropdown-menu" aria-labelledby="egg-dropdown">
+                              <button type="button" class="dropdown-item egg-item" egg-km="2 km">2 km</button>
+                              <button type="button" class="dropdown-item egg-item" egg-km="5 km">5 km</button>
+                              <button type="button" class="dropdown-item egg-item" egg-km="10 km">10 km</button>
+                          </div>
+                        </div>
+                          </li>
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -58,11 +83,13 @@
                 </div>
               </nav>
         </header>
-        <div class="container">
-          <div id="boxes">
-        </div>
-      </div>
-    </div>
+        <main>
+            <div class="container">
+                <div id="boxes">
+              </div>
+            </div>
+        </main>
+       </div>
     <footer></footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="./data/pokemon/pokemon.js"></script>
