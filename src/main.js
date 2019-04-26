@@ -35,7 +35,7 @@ let showPkmn = (arr) => {
 			pkmnContainer.innerHTML = "<h4 class='pkmn-name'>"+arr[i].name+" #"+arr[i].num+"</h4>";
 			pkmnContainer.innerHTML += "<br>"
 			pkmnContainer.innerHTML += "<img src='"+arr[i].img+"'>"
-			pkmnContainer.innerHTML += "<p>"+arr[i].type;+"</p>"
+			pkmnContainer.innerHTML += "<p>"+arr[i].type+"</p>";
 			box.appendChild(pkmnContainer);
     }
     pkmnBoxes.appendChild(box);
@@ -64,15 +64,6 @@ eggItems.forEach(element => {
 let orderedBy = document.querySelectorAll("button.ordered-by");
 orderedBy.forEach(element => {
 	element.addEventListener("click", () => {
-		if (){
-			aZ = showPkmn(data.orderingBy(localStorage.getItem("currentArray"))
-		}
-		else if (){
-			zA = showPkmn(data.orderingBy(localStorage.getItem("currentArray")))
-		}
-		else {
-			showPkmn(data.orderedBy(pkmnArray))
-		}
+		showPkmn(data.orderingBy(localStorage.getItem("currentArray"), element.getAttribute("ordered-by")));
 	})
-})
-*/
+}) */

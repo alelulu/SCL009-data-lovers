@@ -25,18 +25,30 @@ window.data = {
         pkmnEgg.push(arr[i])
       } 
     }
+    localStorage.setItem("currentArray", pkmnEgg)
     return pkmnEgg
-  },
+  }//,
 
   //order by
   /*
-  orderingBy: (arr) => {
+  orderingBy: (arr, orderCondition) => {
+    let orderedPkmn = [];
     for (let i = 0; i < arr.length; i++){
-      let orderedPkmn = arr.sort(arr[i])
+      if(orderCondition == "a-z"){
+
+        orderedPkmn = arr.sort((a, b) => {
+          return (a.name > b.name)
+      })
+      }
+      else if (orderCondition == "z-a"){
+        orderedPkmn = arr.name.sort().reverse
+      }
+      else {
+        orderedPkmn = arr.sort(arr[i].id)
+      }
     return orderedPkmn
     }
-  }
-  */
+  }*/
 }
 // esta es una función de ejemplo
 // puedes ver como agregamos la función a nuestro objeto global window
