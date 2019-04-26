@@ -5,7 +5,7 @@ let pkmnArray = POKEMON.pokemon;
 //Mostrando en index todos los pkmn; llamamos a la funcion showPkmn con el load del body
 let indexPage = document.getElementById("index-page");
 if (indexPage != null){
-	window.addEventListener("load",() =>{
+	window.addEventListener("load",() => {
 		showPkmn(pkmnArray)
 	})
 }
@@ -42,23 +42,37 @@ let showPkmn = (arr) => {
 }
 
 
-}
+//filtrando tipo en dom (llamando a nuestra función)
+let typeItems = document.querySelectorAll('button.type-item');
+typeItems.forEach(element => {
+	element.addEventListener('click', () => {
+		showPkmn(data.filterType(pkmnArray, element.getAttribute('type-name')));
+	});
+});
 
-// let pkmntype = [];
-// for (let i = 0; i < pkmnArray.length; i++); {
-// if (pkmnArray[pkmnCount].type === "Rock"){
-//  pkmntype.push(pkmnArray[pkmnCount].name);
-// }
-// }
-
-// console.log(pkmntype);
-
-const pkmntype = pkmnArray.filter(tipo => {
-		return tipo.type == "Rock";
+//filtrando huevos en dom (llamando a nuestra función)
+let eggItems = document.querySelectorAll("button.egg-item");
+eggItems.forEach(element => {
+	element.addEventListener("click", () => {
+		showPkmn(data.filterEgg(pkmnArray, element.getAttribute("egg-km")))
 	})
-console.log(pkmntype);
+})
+//console.log(filterEgg(pkmnArray, "2 km"))
 
-let pkdxNumber = document.getElementById("pkdx-number");
-let aToZ = document.getElementById("a-z");
-let zToA = document.getElementById("z-a");
-//aToZ.addEventListener("click", () => {
+//ordenando a-z
+/*
+let orderedBy = document.querySelectorAll("button.ordered-by");
+orderedBy.forEach(element => {
+	element.addEventListener("click", () => {
+		if (){
+			aZ = showPkmn(data.orderingBy(localStorage.getItem("currentArray"))
+		}
+		else if (){
+			zA = showPkmn(data.orderingBy(localStorage.getItem("currentArray")))
+		}
+		else {
+			showPkmn(data.orderedBy(pkmnArray))
+		}
+	})
+})
+*/

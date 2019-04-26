@@ -21,7 +21,7 @@
             </div>
           </div>
             <nav class="navbar navbar-expand-md navbar-light bg-light">
-                <a class="navbar-brand" href="#"><img src="https://66.media.tumblr.com/tumblr_lxkula5W031r2nnw5.png" alt="logo"> Pokédex</a>
+                <a class="navbar-brand reset" href="#"><img src="https://66.media.tumblr.com/tumblr_lxkula5W031r2nnw5.png" alt="logo"> Pokédex</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -29,7 +29,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                      <a class="nav-link reset" href="#">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
 
@@ -37,9 +37,9 @@
                         Ordenar
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <button type="button" id="pkdx-number" class="dropdown-item">Número Pokédex</button>
-                        <button type="button" id="a-z" class="dropdown-item">A-Z</button>
-                        <button type="button" id="z-a" class="dropdown-item">Z-A</button>
+                        <button type="button" ordered-by="pkdx-number" class="dropdown-item">Número Pokédex</button>
+                        <button type="button" ordered-by="a-z" class="dropdown-item">A-Z</button>
+                        <button type="button" ordered-by="z-a" class="dropdown-item">Z-A</button>
                       </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -47,7 +47,7 @@
                           Filtrar
                         </a>
                         <div class="dropdown-menu" id="type-dropdown" aria-labelledby="navbarDropdown">
-                          <button class="dropdown-item">Tipo</button>
+                          <button type="button" class="dropdown-item dropdown-toggle" data-toggle="dropdown">Tipo</button>
                             <div class="dropdown-menu" aria-labelledby="type-dropdown">
                               <button type="button" class="dropdown-item type-item" type-name="Bug">Bug</button>
                               <button type="button" class="dropdown-item type-item" type-name="Dragon">Dragon</button>
