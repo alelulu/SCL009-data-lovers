@@ -37,12 +37,11 @@ window.data = {
         pkmnEgg.push(arr[i])
       } 
     }
-    saveCurrentArray(pkmnType)
+    saveCurrentArray(pkmnEgg)
     return pkmnEgg
   },
 
   orderingBy: (arr, orderCondition) => {
-    console.log(arr)
     let orderedPkmn = [];
     if (orderCondition == "a-z"){
       orderedPkmn = arr.sort(orderByName);
@@ -79,6 +78,11 @@ function ordenByNumber (a, b) {
 function saveCurrentArray (arr) {
   window.currentArray = arr;
 }
+
+function suma(num1, num2) {
+  return num1 + num2;
+}
+
   
   
   // Función filterEgg pero con el método 

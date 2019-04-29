@@ -1,7 +1,7 @@
 /* Manejo del DOM */
 //acá va cómo se muestra la info (tabla)
 //Declaramos variable para llamar array
-let pkmnArray = POKEMON.pokemon;
+let pkmnArray = window.POKEMON.pokemon;
 //Mostrando en index todos los pkmn; llamamos a la funcion showPkmn con el load del body
 let indexPage = document.getElementById("index-page");
 if (indexPage != null){
@@ -48,7 +48,7 @@ let showPkmn = (arr) => {
 let typeItems = document.querySelectorAll("button.type-item");
 typeItems.forEach(element => {
 	element.addEventListener("click", () => {
-		showPkmn(data.filterType(pkmnArray, element.getAttribute('type-name')));
+		showPkmn(window.data.filterType(pkmnArray, element.getAttribute('type-name')));
 	});
 });
 
@@ -56,7 +56,7 @@ typeItems.forEach(element => {
 let eggItems = document.querySelectorAll("button.egg-item");
 eggItems.forEach(element => {
 	element.addEventListener("click", () => {
-		showPkmn(data.filterEgg(pkmnArray, element.getAttribute("egg-km")))
+		showPkmn(window.data.filterEgg(pkmnArray, element.getAttribute("egg-km")))
 	})
 })
 //console.log(filterEgg(pkmnArray, "2 km"))
@@ -64,7 +64,7 @@ eggItems.forEach(element => {
 let orderedBy = document.querySelectorAll("button.ordered-by");
 orderedBy.forEach(element => {
 	element.addEventListener("click", () => {
-		showPkmn(data.orderingBy(getCurrentArray(), element.getAttribute("ordered-by")));
+		showPkmn(window.data.orderingBy(getCurrentArray(), element.getAttribute("ordered-by")));
 	})
 })
 

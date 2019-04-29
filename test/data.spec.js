@@ -10,9 +10,6 @@ describe('data.filterType', () => {
     assert.equal(typeof window.data.filterType, 'function');
   });
 
-
-
-
   it('debería retornar "Electric" para Pikachu', () => {
     assert.equal(window.data.filterType("Pikachu", "Electric"), 'Pikachu');
   });
