@@ -38,20 +38,6 @@ window.data = {
     }
     return pkmnEgg
   },
-  //Compare function para ordenar A-Z o Z-A
-  orderByName: (a, b) => {
-    if (a.name < b.name){
-      return -1;
-    }
-    if (a.name > b.name){
-      return 1;
-    }
-      return 0;
-  },
-  //Compare function para ordenar por número
-  ordenByNumber: (a, b) => {
-    return a.id - b.id;
-  },
 
   orderingBy: (arr, orderCondition) => {
     let orderedPkmn = [];
@@ -65,11 +51,29 @@ window.data = {
       orderedPkmn = arr.sort(ordenByNumber);
     }
     return orderedPkmn;
-    },
-    //Función para guardar array actual ej: array tipo eléctrico
-    saveArray:(arr)=> {
-      window.currentArray = arr;
     }
+  }
+
+  // FUNCIONES FUERA DEL OBJETO (NO SE EXPORTAN EN window.data)
+
+  //Compare function para ordenar A-Z o Z-A
+  function orderByName (a, b) {
+    if (a.name < b.name){
+      return -1;
+    }
+    if (a.name > b.name){
+      return 1;
+    }
+      return 0;
+  }
+  //Compare function para ordenar por número
+  function ordenByNumber (a, b) {
+    return a.id - b.id;
+  }
+
+  //Función para guardar array actual ej: array tipo eléctrico
+  function saveArray(arr) {
+    window.currentArray = arr;
   }
   
   
