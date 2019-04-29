@@ -38,6 +38,41 @@ window.data = {
     }
     return pkmnEgg
   },
+  //Compare function para ordenar A-Z o Z-A
+  orderByName: (a, b) => {
+    if (a.name < b.name){
+      return -1;
+    }
+    if (a.name > b.name){
+      return 1;
+    }
+      return 0;
+  },
+  //Compare function para ordenar por número
+  ordenByNumber: (a, b) => {
+    return a.id - b.id;
+  },
+
+  orderingBy: (arr, orderCondition) => {
+    let orderedPkmn = [];
+    if (orderCondition == "a-z"){
+      orderedPkmn = arr.sort(orderByName);
+    }
+    else if (orderCondition == "z-a"){
+      orderedPkmn = arr.sort(orderByName).reverse();
+    }
+    else {
+      orderedPkmn = arr.sort(ordenByNumber);
+    }
+    return orderedPkmn;
+    },
+    //Función para guardar array actual ej: array tipo eléctrico
+    saveArray:(arr)=> {
+      window.currentArray = arr;
+    }
+  }
+  
+  
   // Función filterEgg pero con el método 
   /*
   filterEgg: (arr, km) => {
@@ -48,4 +83,5 @@ window.data = {
   },
   */
   //order by
-}
+
+
