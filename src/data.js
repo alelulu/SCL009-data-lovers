@@ -13,9 +13,20 @@ window.data = {
         pkmnType.push(arr[i])
       }	
     }
-    localStorage.setItem("currentArray", pkmnType)
     return pkmnType
   },
+  // Función filterType pero con el método filter explicado
+  /*filterType: (arr, typeRequested) => {
+    //creo una variable donde va a guardar las cosas filtradas
+    const pkmnType = arr.filter(element => {
+      //el filter es más o menos como un for each, pasa por todos los elementos del array(array data en este caso)
+      //element va a tomar ese valor en cada vuelta
+      return element.type.includes(typeRequested);
+      //includes pregunta si está dentro del array o no (true or false)
+    }) 
+    saveArray(pkmnType);
+    return pkmnType
+  },*/
 
   //filtering by egg
   filterEgg: (arr, km) => {
@@ -25,40 +36,16 @@ window.data = {
         pkmnEgg.push(arr[i])
       } 
     }
-    localStorage.setItem("currentArray", pkmnEgg)
     return pkmnEgg
-  }//,
-
-  //order by
+  },
+  // Función filterEgg pero con el método 
   /*
-  orderingBy: (arr, orderCondition) => {
-    let orderedPkmn = [];
-    for (let i = 0; i < arr.length; i++){
-      if(orderCondition == "a-z"){
-
-        orderedPkmn = arr.sort((a, b) => {
-          return (a.name > b.name)
-      })
-      }
-      else if (orderCondition == "z-a"){
-        orderedPkmn = arr.name.sort().reverse
-      }
-      else {
-        orderedPkmn = arr.sort(arr[i].id)
-      }
-    return orderedPkmn
-    }
-  }*/
+  filterEgg: (arr, km) => {
+    pkmnEgg = arr.filter(element => {
+      return element.egg.includes(km);
+    })
+    return pkmnEgg;
+  },
+  */
+  //order by
 }
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
-
-// acá va filtrar, calcular y ordenar.
-
-/*
-const example = () => {
-  return 'example';
-};
-
-window.example = example;
-*/

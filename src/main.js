@@ -17,7 +17,7 @@ pageReset.forEach(element =>{
 	})
 })
 
-//yFunción para mostrar en cajitas responsivas los Pkmn y sus datos respectivos. Creamos div dinámico dentro de nuestro div del html ("boxes")
+//Función para mostrar en cajitas responsivas los Pkmn y sus datos respectivos. Creamos div dinámico dentro de nuestro div del html ("boxes")
 let showPkmn = (arr) => {
 	let pkmnBoxes = document.getElementById("boxes");
   pkmnBoxes.innerHTML = " ";
@@ -58,12 +58,3 @@ eggItems.forEach(element => {
 	})
 })
 //console.log(filterEgg(pkmnArray, "2 km"))
-
-//ordenando a-z
-/*
-let orderedBy = document.querySelectorAll("button.ordered-by");
-orderedBy.forEach(element => {
-	element.addEventListener("click", () => {
-		showPkmn(data.orderingBy(localStorage.getItem("currentArray"), element.getAttribute("ordered-by")));
-	})
-}) */
