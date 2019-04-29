@@ -43,9 +43,9 @@ let showPkmn = (arr) => {
 
 
 //filtrando tipo en dom (llamando a nuestra función)
-let typeItems = document.querySelectorAll('button.type-item');
+let typeItems = document.querySelectorAll("button.type-item");
 typeItems.forEach(element => {
-	element.addEventListener('click', () => {
+	element.addEventListener("click", () => {
 		showPkmn(data.filterType(pkmnArray, element.getAttribute('type-name')));
 	});
 });
@@ -58,3 +58,19 @@ eggItems.forEach(element => {
 	})
 })
 //console.log(filterEgg(pkmnArray, "2 km"))
+
+let orderedBy = document.querySelectorAll("button.ordered-by");
+orderedBy.forEach(element => {
+	element.addEventListener("click", () => {
+		showPkmn(data.orderingBy(pkmnArray, element.getAttribute("ordered-by")));
+	})
+})
+
+/*GetCurrentArray(() => {
+	return data.saveArray;
+})*/
+
+
+
+
+
