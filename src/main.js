@@ -6,14 +6,16 @@ let pkmnArray = POKEMON.pokemon;
 let indexPage = document.getElementById("index-page");
 if (indexPage != null){
 	window.addEventListener("load",() => {
-		showPkmn(pkmnArray)
+		window.currentArray = pkmnArray;
+		showPkmn(pkmnArray);
 	})
 }
 //Para que se resetee y vuelva a mostrar en orden por id. Usamos querySelectorAll para la clase reset. Llamamos a la funion showPkmn
 let pageReset = document.querySelectorAll(".reset");
 pageReset.forEach(element =>{
 	element.addEventListener("click", () => {
-		showPkmn(pkmnArray)
+		window.currentArray = pkmnArray;
+		showPkmn(pkmnArray);
 	})
 })
 
@@ -62,13 +64,14 @@ eggItems.forEach(element => {
 let orderedBy = document.querySelectorAll("button.ordered-by");
 orderedBy.forEach(element => {
 	element.addEventListener("click", () => {
-		showPkmn(data.orderingBy(pkmnArray, element.getAttribute("ordered-by")));
+		showPkmn(data.orderingBy(getCurrentArray(), element.getAttribute("ordered-by")));
 	})
 })
 
-/*GetCurrentArray(() => {
-	return data.saveArray;
-})*/
+const getCurrentArray = () => {
+	//Aquí llamamos al campo del objeto window que guardamos con la función saveCurrentArray
+	return window.currentArray
+}
 
 
 

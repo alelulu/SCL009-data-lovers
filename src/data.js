@@ -13,6 +13,7 @@ window.data = {
         pkmnType.push(arr[i])
       }	
     }
+    saveCurrentArray(pkmnType)
     return pkmnType
   },
   // Función filterType pero con el método filter explicado
@@ -36,10 +37,12 @@ window.data = {
         pkmnEgg.push(arr[i])
       } 
     }
+    saveCurrentArray(pkmnType)
     return pkmnEgg
   },
 
   orderingBy: (arr, orderCondition) => {
+    console.log(arr)
     let orderedPkmn = [];
     if (orderCondition == "a-z"){
       orderedPkmn = arr.sort(orderByName);
@@ -51,30 +54,31 @@ window.data = {
       orderedPkmn = arr.sort(ordenByNumber);
     }
     return orderedPkmn;
-    }
   }
+}
 
-  // FUNCIONES FUERA DEL OBJETO (NO SE EXPORTAN EN window.data)
+// FUNCIONES FUERA DEL OBJETO (NO SE EXPORTAN EN window.data)
 
-  //Compare function para ordenar A-Z o Z-A
-  function orderByName (a, b) {
-    if (a.name < b.name){
-      return -1;
-    }
-    if (a.name > b.name){
-      return 1;
-    }
-      return 0;
+//Compare function para ordenar A-Z o Z-A
+function orderByName (a, b) {
+  if (a.name < b.name){
+    return -1;
   }
-  //Compare function para ordenar por número
-  function ordenByNumber (a, b) {
-    return a.id - b.id;
+  if (a.name > b.name){
+    return 1;
   }
+    return 0;
+}
+//Compare function para ordenar por número
+function ordenByNumber (a, b) {
+  return a.id - b.id;
+}
 
-  //Función para guardar array actual ej: array tipo eléctrico
-  function saveArray(arr) {
-    window.currentArray = arr;
-  }
+//Función para guardar array actual ej: array tipo eléctrico
+//Lo guarda en una key del objeto window, vamos a llamar a window.currentArray en el dom
+function saveCurrentArray (arr) {
+  window.currentArray = arr;
+}
   
   
   // Función filterEgg pero con el método 
