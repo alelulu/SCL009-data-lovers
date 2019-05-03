@@ -22,7 +22,10 @@ pageReset.forEach(element =>{
 //Función para mostrar en cajitas responsivas los Pkmn y sus datos respectivos. Creamos div dinámico dentro de nuestro div del html ("boxes")
 let showPkmn = (arr) => {
 	let pkmnBoxes = document.getElementById("boxes");
-  pkmnBoxes.innerHTML = " ";
+	pkmnBoxes.innerHTML = " ";
+	let pkmnCount = document.getElementById("pkmn-count");
+	let pknmPage = window.data.calculate(arr);
+	pkmnCount.innerHTML = "En este grupo hay un total de "+pknmPage+" Pokémon";
   //Creamos un div para la clase row y lo alineamos (responsive)
   let box = document.createElement("div");
 	box.classList.add("row");
