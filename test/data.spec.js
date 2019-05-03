@@ -164,4 +164,15 @@ describe('data.orderingBy', () => {
       }
     ]);
   });
+});
+
+describe('data.calculate', () => {
+  
+  it('debería ser una función', () => {
+    assert.equal(typeof window.data.calculate, 'function');
+  });
+
+  it('debería retornar el número total de array entregado', () => {
+    assert.deepEqual(window.data.calculate(data), 3);
+  });
 })

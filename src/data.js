@@ -40,7 +40,16 @@ window.data = {
     saveCurrentArray(pkmnEgg)
     return pkmnEgg
   },
-
+  // Función filterEgg pero con el método 
+  /*
+  filterEgg: (arr, km) => {
+    pkmnEgg = arr.filter(element => {
+      return element.egg.includes(km);
+    })
+    return pkmnEgg;
+  },
+  */
+  // Order function
   orderingBy: (arr, orderCondition) => {
     let orderedPkmn = [];
     if (orderCondition == "a-z"){
@@ -53,6 +62,10 @@ window.data = {
       orderedPkmn = arr.sort(ordenByNumber);
     }
     return orderedPkmn;
+  },
+  // Calculate function (total array)
+  calculate: (arr) => {
+    return arr.length;
   }
 }
 
@@ -78,19 +91,3 @@ function ordenByNumber (a, b) {
 function saveCurrentArray (arr) {
   window.currentArray = arr;
 }
-
-
-  
-  
-  // Función filterEgg pero con el método 
-  /*
-  filterEgg: (arr, km) => {
-    pkmnEgg = arr.filter(element => {
-      return element.egg.includes(km);
-    })
-    return pkmnEgg;
-  },
-  */
-  //order by
-
-
