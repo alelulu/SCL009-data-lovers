@@ -67,7 +67,7 @@ eggItems.forEach(element => {
 let orderedBy = document.querySelectorAll("button.ordered-by");
 orderedBy.forEach(element => {
 	element.addEventListener("click", () => {
-		showPkmn(window.data.orderingBy(getCurrentArray(), element.getAttribute("ordered-by")));
+		showPkmn(window.data.orderingBy(getCurrentArray(), element.getAttribute("ordered-by"), element.getAttribute("sort-order")));
 	})
 })
 

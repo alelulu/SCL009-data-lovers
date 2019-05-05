@@ -79,7 +79,7 @@ describe('data.orderingBy', () => {
   });
 
   it('debería retornar el array ordenado de la A a la Z', () => {
-    assert.deepEqual(window.data.orderingBy(data, "a-z"), [
+    assert.deepEqual(window.data.orderingBy(data, "name", "asc"), [
       {
         "id": 1,
         "num": "001",
@@ -108,7 +108,7 @@ describe('data.orderingBy', () => {
   });
 
   it('debería retornar el array ordenado de la Z a la A', () => {
-    assert.deepEqual(window.data.orderingBy(data, "z-a"), [
+    assert.deepEqual(window.data.orderingBy(data, "name", "des"), [
       {
         "id": 25,
         "num": "025",
@@ -137,7 +137,7 @@ describe('data.orderingBy', () => {
   });
 
   it('debería retornar el array ordenado por número', () => {
-    assert.deepEqual(window.data.orderingBy(data, "pkdx-number"), [
+    assert.deepEqual(window.data.orderingBy(data, "id", "asc"), [
       {
         "id": 1,
         "num": "001",

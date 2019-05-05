@@ -50,16 +50,24 @@ window.data = {
   },
   */
   // Order function
-  orderingBy: (arr, orderCondition) => {
+  orderingBy: (arr, sortBy, orderCondition) => {
     let orderedPkmn = [];
-    if (orderCondition == "a-z"){
-      orderedPkmn = arr.sort(orderByName);
+    if (sortBy == "name"){
+      if(orderCondition == "asc"){
+        //orderderByName cambiado por localeCompare function
+        orderedPkmn = arr.sort((a, b) => a.name.localeCompare(b.name));
+      }
+      else if (orderCondition == "des"){
+        orderedPkmn = arr.sort(orderByName).reverse();
+      }
     }
-    else if (orderCondition == "z-a"){
-      orderedPkmn = arr.sort(orderByName).reverse();
-    }
-    else {
-      orderedPkmn = arr.sort(ordenByNumber);
+    else if (sortBy == "id"){
+      if(orderCondition == "asc"){
+        orderedPkmn = arr.sort(ordenByNumber);
+      }
+      else if (orderCondition == "des"){
+        orderedPkmn = arr.sort(ordenByNumber).reverse();
+      }
     }
     return orderedPkmn;
   },
