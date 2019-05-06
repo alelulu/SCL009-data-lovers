@@ -136,7 +136,7 @@ describe('data.orderingBy', () => {
     ]);
   });
 
-  it('debería retornar el array ordenado por número', () => {
+  it('debería retornar el array ordenado por número ascendente', () => {
     assert.deepEqual(window.data.orderingBy(data, "id", "asc"), [
       {
         "id": 1,
@@ -162,6 +162,35 @@ describe('data.orderingBy', () => {
           "Ice"
         ]
       }
+    ]);
+  });
+
+  it('debería retornar el array ordenado por número descendiente', () => {
+    assert.deepEqual(window.data.orderingBy(data, "id", "des"), [
+      {
+        "id": 87,
+        "num": "087",
+        "name": "Dewgong",
+        "type": [
+          "Water",
+          "Ice"
+        ]
+      },{
+        "id": 25,
+        "num": "025",
+        "name": "Pikachu",
+        "type": [
+          "Electric"
+        ]
+      }, {
+        "id": 1,
+        "num": "001",
+        "name": "Bulbasaur",
+        "type": [
+          "Grass",
+          "Poison"
+        ]
+      } 
     ]);
   });
 });

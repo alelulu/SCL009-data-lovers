@@ -1,6 +1,5 @@
-//filtering by type
 window.data = {
-  filterType: (arr, type) => {
+  /*filterType: (arr, type) => {
     let pkmnType = [];
     for (let i = 0; i < arr.length; i++) {
       if(arr[i].type.length > 1) {
@@ -15,19 +14,19 @@ window.data = {
     }
     saveCurrentArray(pkmnType)
     return pkmnType
-  },
+  },*/
   // Función filterType pero con el método filter explicado
-  /*filterType: (arr, typeRequested) => {
+  filterType: (arr, typeRequested) => {
     //creo una variable donde va a guardar las cosas filtradas
     const pkmnType = arr.filter(element => {
-      //el filter es más o menos como un for each, pasa por todos los elementos del array(array data en este caso)
+      //el filter es más o menos como un for each, pasa por todos los elementos del array
       //element va a tomar ese valor en cada vuelta
       return element.type.includes(typeRequested);
       //includes pregunta si está dentro del array o no (true or false)
     }) 
-    saveArray(pkmnType);
+    saveCurrentArray(pkmnType);
     return pkmnType
-  },*/
+  },
 
   //filtering by egg
   filterEgg: (arr, km) => {
