@@ -33,14 +33,26 @@ let showPkmn = (arr) => {
   //Para que revise cada dato del array lo pasamos por un for. Dentro de este creamos un div con clases col y llamamos datos desde la data
 	for (let i = 0; i < arr.length; i++) {
 		let pkmnContainer = document.createElement('div');
+			pkmnContainer.classList.add("card");
+			pkmnContainer.classList.add("side");
       pkmnContainer.classList.add("pkmn-container");
 			pkmnContainer.classList.add("col-sm-6");
 			pkmnContainer.classList.add("col-md-6");
 			pkmnContainer.classList.add("col-lg-3");
+			let backCard = document.createElement('div');
+			backCard.classList.add("side");
+			backCard.classList.add("back")
+			//backCard.innerHTML = "<p>"+arr[i].weight+" "+arr[i].height+"</p>";
+			backCard.innerHTML = `<p> Peso: ${arr[i].weight}</p>
+			<p>Altura: ${arr[i].height} </p>
+			<p>Sus debilidades son: </p>
+			<p>${arr[i].weaknesses} </p>  `;
+			//backCard.innerHTML += "<p>"+arr[i].weaknesses+"</p>"
 			pkmnContainer.innerHTML = "<h4 class='pkmn-name'>"+arr[i].name+" #"+arr[i].num+"</h4>";
 			pkmnContainer.innerHTML += "<br>"
 			pkmnContainer.innerHTML += "<img src='"+arr[i].img+"'>"
 			pkmnContainer.innerHTML += "<p>"+arr[i].type+"</p>";
+			pkmnContainer.appendChild(backCard);
 			box.appendChild(pkmnContainer);
     }
     pkmnBoxes.appendChild(box);
