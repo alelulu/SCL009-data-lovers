@@ -58,7 +58,7 @@ window.data = {
         orderedPkmn = arr.sort((a, b) => a.name.localeCompare(b.name));
       }
       else if (orderCondition == "des"){
-        orderedPkmn = arr.sort(orderByName).reverse();
+        orderedPkmn = arr.sort((a, b) => a.name.localeCompare(b.name)).reverse();
       }
     }
     else if (sortBy == "id"){
@@ -80,6 +80,7 @@ window.data = {
 // FUNCIONES FUERA DEL OBJETO (NO SE EXPORTAN EN window.data)
 
 //Compare function para ordenar A-Z o Z-A
+/*
 function orderByName (a, b) {
   if (a.name < b.name){
     return -1;
@@ -89,6 +90,7 @@ function orderByName (a, b) {
   }
     return 0;
 }
+*/
 //Compare function para ordenar por número
 function ordenByNumber (a, b) {
   return a.id - b.id;
