@@ -32,7 +32,7 @@ let showPkmn = (arr) => {
   box.classList.add("justify-content-center");
   //Para que revise cada dato del array lo pasamos por un for. Dentro de este creamos un div con clases col y llamamos datos desde la data
 	for (let i = 0; i < arr.length; i++) {
-    let pkmnContainer = document.createElement('div');
+		let pkmnContainer = document.createElement('div');
       pkmnContainer.classList.add("pkmn-container");
 			pkmnContainer.classList.add("col-sm-6");
 			pkmnContainer.classList.add("col-md-6");
