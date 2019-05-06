@@ -1,9 +1,3 @@
-.pkmn-container {
-    text-align: center;
-    margin: 0px;
-    padding: 0%;
-    border-radius: 20%;
-}
 body {
     background: rgba(100,165,150,1);
 background: -moz-linear-gradient(left, rgba(100,165,150,1) 0%, rgba(43,103,123,1) 100%);
@@ -13,5 +7,51 @@ background: -o-linear-gradient(left, rgba(100,165,150,1) 0%, rgba(43,103,123,1) 
 background: -ms-linear-gradient(left, rgba(100,165,150,1) 0%, rgba(43,103,123,1) 100%);
 background: linear-gradient(to right, rgba(100,165,150,1) 0%, rgba(43,103,123,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64a596', endColorstr='#2b677b', GradientType=1 );
+}
+
+body {
+    font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+    margin: 12px 0;
+  }
+  .card-container {
+    cursor: pointer;
+    height: 150px;
+    perspective: 600;
+    position: relative;
+    width: 150px;
+  }
+  .card {
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    width: 100%;
+  }
+  .card:hover {
+    transform: rotateY(180deg);
+  }
+  .card .side {
+    backface-visibility: hidden;
+    border-radius: 6px;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+  }
+  .card .back {
+    background: #eaeaed;
+    color: #0087cc;
+    line-height: 150px;
+    text-align: center;
+    transform: rotateY(180deg);
+  }
+  .side p {
+    height: 10px;
+  }
+  .pkmn-container {
+    text-align: center;
+    margin: 20px;
+    padding: 0%;
+    border-radius: 20%;
 }
 
