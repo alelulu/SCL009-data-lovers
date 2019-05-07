@@ -4,7 +4,7 @@
 body {
   font-family: 'Signika', sans-serif !important;
   background-color: #79cd9d !important;
-  color: #333333 !important;
+  color: #1e2d5e !important;
 }
 
 .card-container {
@@ -34,7 +34,7 @@ body {
   width: 100%;
 }
 .card .back {
-  background: gray;
+  background: #1e2d5e;
   color: #ffffff;
   line-height: 150px;
   text-align: center;
@@ -90,4 +90,9 @@ div.dropdown-menu {
 }
 img#logo-pkmn {
   margin-right: 5px;
+}
+img#img-banner {
+display:block;
+margin:auto;
+height: 300px;
 }
