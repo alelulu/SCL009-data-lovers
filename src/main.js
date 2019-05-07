@@ -51,7 +51,7 @@ let showPkmn = (arr) => {
 		pkmnImgRow.classList.add("row");
 		let pkmnImgCol = document.createElement("div");
 		pkmnImgCol.classList.add("col");
-		pkmnImgCol.innerHTML = "<img src='"+arr[i].img+"'>"
+		pkmnImgCol.innerHTML = "<img id='pkmn-img' src='"+arr[i].img+"'>"
 		pkmnImgRow.appendChild(pkmnImgCol)
 
 		let pkmnTypeRow = document.createElement("div");
