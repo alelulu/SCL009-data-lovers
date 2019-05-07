@@ -57,9 +57,32 @@ let showPkmn = (arr) => {
 		let pkmnTypeRow = document.createElement("div");
 		pkmnTypeRow.classList.add("row");
 		let pkmnTypeCol = document.createElement("div");
-		pkmnTypeCol.classList.add("col");
-		pkmnTypeCol.innerHTML = "<p>"+arr[i].type+"</p>";
-		pkmnTypeRow.appendChild(pkmnTypeCol);
+		if(arr[i].type[1] != undefined) {
+			let pkmnTypeCol1 = document.createElement("div");
+			pkmnTypeCol1.classList.add("col-3");
+			pkmnTypeCol1.classList.add("offset-3");
+			let pkmnTypeCol2 = document.createElement("div");
+			pkmnTypeCol2.classList.add("col-3");
+			pkmnTypeCol1.classList.add("types");
+			pkmnTypeCol2.classList.add("types");
+			let typeClass1 = arr[i].type[0].toLowerCase();
+			pkmnTypeCol1.innerHTML = "<p class=\"type-box "+typeClass1+"\" type-name=\""+arr[i].type[0]+"\">"+arr[i].type[0]+"</p>";
+			let typeClass2 = arr[i].type[1].toLowerCase();
+			pkmnTypeCol2.innerHTML = "<p class=\"type-box "+typeClass2+"\" type-name=\""+arr[i].type[1]+"\">"+arr[i].type[1]+"</p>";
+
+			pkmnTypeRow.appendChild(pkmnTypeCol1);
+			pkmnTypeRow.appendChild(pkmnTypeCol2);
+		}
+		else {
+			pkmnTypeCol = document.createElement("div");
+			pkmnTypeCol.classList.add("col-4");
+			pkmnTypeCol.classList.add("offset-4");
+			pkmnTypeCol.classList.add("types");
+			let typeClass = arr[i].type[0].toLowerCase();
+			pkmnTypeCol.innerHTML = "<p class=\"type-box "+typeClass+"\" type-name=\""+arr[i].type[0]+"\">"+arr[i].type[0]+"</p>";
+
+			pkmnTypeRow.appendChild(pkmnTypeCol);
+		}
 		pkmnContainer.appendChild(pkmnNameRow);
 		pkmnContainer.appendChild(pkmnImgRow);
 		pkmnContainer.appendChild(pkmnTypeRow);
@@ -69,8 +92,15 @@ let showPkmn = (arr) => {
 		backCard.classList.add("back")
 		backCard.innerHTML = `<p> ⚖️ Peso: ${arr[i].weight}</p>
 		<p> ⬆️ Altura: ${arr[i].height}</p>
-		<p> 😧 Debilidades: </p>
-		<p>${arr[i].weaknesses} </p>  `;
+		<p> 😧 Debilidades: </p>`;
+		let weaknessList = document.createElement("ul");
+		weaknessList.innerHTML = " ";
+		arr[i].weaknesses.forEach(element => {
+			weaknessList.innerHTML += "<li class=\"weakness-list\">"+element+"</li>";
+			console.log(element);
+		});
+		backCard.appendChild(weaknessList);
+
 		pkmnContainer.appendChild(backCard);
 		box.appendChild(pkmnContainer);
   }

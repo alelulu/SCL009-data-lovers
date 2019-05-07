@@ -36,7 +36,7 @@ body {
 .card .back {
   background: #1e2d5e;
   color: #ffffff;
-  line-height: 150px;
+  line-height: 100px;
   text-align: center;
   transform: rotateY(180deg);
   border-radius: 40px !important;
@@ -95,4 +95,43 @@ img#img-banner {
 display:block;
 margin:auto;
 height: 300px;
+}
+
+ul {
+  list-style: none;
+}
+
+li.weaknes-list {
+  padding: 0;
+  margin: 0;
+  height: 15px !important;
+}
+
+div.types {
+  padding: 0 !important;
+}
+
+p.poison {
+  background: purple;
+}
+p.fire {
+  background: red;
+}
+p.grass {
+  background: green;
+}
+p.water {
+  background: blue;
+}
+p.bug {
+  background: #449225;
+}
+p.flying {
+  background: #a5bafd;
+}
+p.normal {
+  background: #cacaca;
+}
+p.electric {
+  background: yellow;
 }
