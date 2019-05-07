@@ -8,6 +8,7 @@ const data = [
     "id": 1,
     "num": "001",
     "name": "Bulbasaur",
+    "egg": "2 km",
     "type": [
       "Grass",
       "Poison"
@@ -16,6 +17,7 @@ const data = [
     "id": 25,
     "num": "025",
     "name": "Pikachu",
+    "egg": "2 km",
     "type": [
       "Electric"
     ]
@@ -23,6 +25,7 @@ const data = [
     "id": 87,
     "num": "087",
     "name": "Dewgong",
+    "egg": "5 km",
     "type": [
       "Water",
       "Ice"
@@ -41,6 +44,7 @@ describe('data.filterType', () => {
       "id": 25,
       "num": "025",
       "name": "Pikachu",
+      "egg": "2 km",
       "type": [
         "Electric"
       ]
@@ -52,6 +56,7 @@ describe('data.filterType', () => {
     "id": 1,
     "num": "001",
     "name": "Bulbasaur",
+    "egg": "2 km",
     "type": [
       "Grass",
       "Poison"
@@ -64,13 +69,28 @@ describe('data.filterType', () => {
     "id": 87,
     "num": "087",
     "name": "Dewgong",
+    "egg": "5 km",
     "type": [
       "Water",
       "Ice"
       ]
     }]);
   });
-})
+
+
+  it('debería retornar el objeto Dewgong al filtrar por huevo 5 km', () => {
+    assert.deepEqual(window.data.filterEgg(data, "5 km"), [{
+    "id": 87,
+    "num": "087",
+    "name": "Dewgong",
+    "egg": "5 km",
+    "type": [
+      "Water",
+      "Ice"
+      ]
+    }]);
+  });
+});
 
 describe('data.orderingBy', () => {
   
@@ -84,6 +104,7 @@ describe('data.orderingBy', () => {
         "id": 1,
         "num": "001",
         "name": "Bulbasaur",
+        "egg": "2 km",
         "type": [
           "Grass",
           "Poison"
@@ -92,6 +113,7 @@ describe('data.orderingBy', () => {
         "id": 87,
         "num": "087",
         "name": "Dewgong",
+        "egg": "5 km",
         "type": [
           "Water",
           "Ice"
@@ -100,6 +122,7 @@ describe('data.orderingBy', () => {
         "id": 25,
         "num": "025",
         "name": "Pikachu",
+        "egg": "2 km",
         "type": [
           "Electric"
         ]
@@ -113,6 +136,7 @@ describe('data.orderingBy', () => {
         "id": 25,
         "num": "025",
         "name": "Pikachu",
+        "egg": "2 km",
         "type": [
           "Electric"
         ]
@@ -120,6 +144,7 @@ describe('data.orderingBy', () => {
         "id": 87,
         "num": "087",
         "name": "Dewgong",
+        "egg": "5 km",
         "type": [
           "Water",
           "Ice"
@@ -128,6 +153,7 @@ describe('data.orderingBy', () => {
         "id": 1,
         "num": "001",
         "name": "Bulbasaur",
+        "egg": "2 km",
         "type": [
           "Grass",
           "Poison"
@@ -142,6 +168,7 @@ describe('data.orderingBy', () => {
         "id": 1,
         "num": "001",
         "name": "Bulbasaur",
+        "egg": "2 km",
         "type": [
           "Grass",
           "Poison"
@@ -150,6 +177,7 @@ describe('data.orderingBy', () => {
         "id": 25,
         "num": "025",
         "name": "Pikachu",
+        "egg": "2 km",
         "type": [
           "Electric"
         ]
@@ -157,6 +185,7 @@ describe('data.orderingBy', () => {
         "id": 87,
         "num": "087",
         "name": "Dewgong",
+        "egg": "5 km",
         "type": [
           "Water",
           "Ice"
@@ -171,6 +200,7 @@ describe('data.orderingBy', () => {
         "id": 87,
         "num": "087",
         "name": "Dewgong",
+        "egg": "5 km",
         "type": [
           "Water",
           "Ice"
@@ -179,6 +209,7 @@ describe('data.orderingBy', () => {
         "id": 25,
         "num": "025",
         "name": "Pikachu",
+        "egg": "2 km",
         "type": [
           "Electric"
         ]
@@ -186,6 +217,7 @@ describe('data.orderingBy', () => {
         "id": 1,
         "num": "001",
         "name": "Bulbasaur",
+        "egg": "2 km",
         "type": [
           "Grass",
           "Poison"
