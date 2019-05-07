@@ -67,9 +67,9 @@ let showPkmn = (arr) => {
 		let backCard = document.createElement('div');
 		backCard.classList.add("side");
 		backCard.classList.add("back")
-		backCard.innerHTML = `<p> Peso: ${arr[i].weight}</p>
-		<p>Altura: ${arr[i].height}</p>
-		<p>Sus debilidades son: </p>
+		backCard.innerHTML = `<p> ⚖️ Peso: ${arr[i].weight}</p>
+		<p> ⬆️ Altura: ${arr[i].height}</p>
+		<p> 😧 Debilidades: </p>
 		<p>${arr[i].weaknesses} </p>  `;
 		pkmnContainer.appendChild(backCard);
 		box.appendChild(pkmnContainer);
