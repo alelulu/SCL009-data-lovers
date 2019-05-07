@@ -29,25 +29,15 @@ window.data = {
   },
 
   //filtering by egg
+  //Función filterEgg pero con el método 
   filterEgg: (arr, km) => {
-    let pkmnEgg = [];
-    for (let i = 0; i < arr.length; i++){
-      if (arr[i].egg == km){
-        pkmnEgg.push(arr[i])
-      } 
-    }
-    saveCurrentArray(pkmnEgg)
-    return pkmnEgg
-  },
-  // Función filterEgg pero con el método 
-  /*
-  filterEgg: (arr, km) => {
-    pkmnEgg = arr.filter(element => {
+    const pkmnEgg = arr.filter(element => {
       return element.egg.includes(km);
     })
+    saveCurrentArray(pkmnEgg);
     return pkmnEgg;
   },
-  */
+
   // Order function
   orderingBy: (arr, sortBy, orderCondition) => {
     let orderedPkmn = [];
@@ -56,15 +46,15 @@ window.data = {
         //orderderByName cambiado por localeCompare function
         orderedPkmn = arr.sort((a, b) => a.name.localeCompare(b.name));
       }
-      else if (orderCondition == "des"){
+      else {
         orderedPkmn = arr.sort((a, b) => a.name.localeCompare(b.name)).reverse();
       }
     }
-    else if (sortBy == "id"){
+    else {
       if(orderCondition == "asc"){
         orderedPkmn = arr.sort(ordenByNumber);
       }
-      else if (orderCondition == "des"){
+      else {
         orderedPkmn = arr.sort(ordenByNumber).reverse();
       }
     }
