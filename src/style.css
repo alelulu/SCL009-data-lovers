@@ -91,18 +91,22 @@ div.dropdown-menu {
 img#logo-pkmn {
   margin-right: 5px;
 }
+
 img#img-banner {
 display:block;
+position: relative;
 margin:auto;
-height: 300px;
+margin-bottom: 10px !important;
+margin-top: 10px !important;
 }
 
 ul {
   list-style: none;
+  padding-bottom: 2px;
 }
 
 li.weaknes-list {
-  padding: 0;
+  padding-bottom: 2px;
   margin: 0;
   height: 15px !important;
 }
@@ -111,27 +115,138 @@ div.types {
   padding: 0 !important;
 }
 
-p.poison {
-  background: purple;
+p.type-box.bug {
+  background: #a6b241;
+  height: 21px;
+  font-size: 14px;
+  border-radius: 6px !important;
+  box-shadow: 2px 2px #285e46 !important;
+  margin-right: 4px;
+  margin-left: 4px;
 }
-p.fire {
-  background: red;
+p.type-box.dragon {
+  background: #6c5bbb;
+  height: 21px;
+  font-size: 14px;
+  border-radius: 6px !important;
+  box-shadow: 2px 2px #285e46 !important;
+  margin-right: 4px;
+  margin-left: 4px;
 }
-p.grass {
-  background: green;
+p.type-box.electric {
+  background: #eed535;
+  height: 21px;
+  font-size: 14px;
+  border-radius: 6px !important;
+  box-shadow: 2px 2px #285e46 !important;
+  margin-right: 4px;
+  margin-left: 4px;
 }
-p.water {
-  background: blue;
+p.type-box.fighting{
+  background: #b85945;
+  height: 21px;
+  font-size: 14px;
+  border-radius: 6px !important;
+  box-shadow: 2px 2px #285e46 !important;
+  margin-right: 2px;
+  margin-left: 2px;
 }
-p.bug {
-  background: #449225;
+p.type-box.fire {
+  background: #f14730;
+  height: 21px;
+  font-size: 14px;
+  border-radius: 6px !important;
+  box-shadow: 2px 2px #285e46 !important;
+  margin-right: 4px;
+  margin-left: 4px;
 }
-p.flying {
-  background: #a5bafd;
+p.type-box.flying {
+  background: #678fcf;
+  height: 21px;
+  font-size: 14px;
+  border-radius: 6px !important;
+  box-shadow: 2px 2px #285e46 !important;
+  margin-right: 4px;
+  margin-left: 4px;
 }
-p.normal {
-  background: #cacaca;
+p.type-box.ghost {
+  background: #363453;
+  height: 21px;
+  font-size: 14px;
+  border-radius: 6px !important;
+  box-shadow: 2px 2px #285e46 !important;
+  margin-right: 4px;
+  margin-left: 4px;
 }
-p.electric {
-  background: yellow;
+p.type-box.grass {
+  background: #7dc95d;
+  height: 21px;
+  font-size: 14px;
+  border-radius: 6px !important;
+  box-shadow: 2px 2px #285e46 !important;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+p.type-box.ground {
+  background: #d7bb56;
+  height: 21px;
+  font-size: 14px;
+  border-radius: 6px !important;
+  box-shadow: 2px 2px #285e46 !important;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+p.type-box.ice {
+  background: #6bb0c3;
+  height: 21px;
+  font-size: 14px;
+  border-radius: 6px !important;
+  box-shadow: 2px 2px #285e46 !important;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+p.type-box.normal {
+  background: #8b8382;
+  height: 21px;
+  font-size: 14px;
+  border-radius: 6px !important;
+  box-shadow: 2px 2px #285e46 !important;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+p.type-box.poison {
+  background: #8a567e;
+  height: 21px;
+  font-size: 14px;
+  border-radius: 6px !important;
+  box-shadow: 2px 2px #285e46 !important;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+p.type-box.psychic {
+  background: #d55a86;
+  height: 21px;
+  font-size: 14px;
+  border-radius: 6px !important;
+  box-shadow: 2px 2px #285e46 !important;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+p.type-box.rock {
+  background: #bfa965;
+  height: 21px;
+  font-size: 14px;
+  border-radius: 6px !important;
+  box-shadow: 2px 2px #285e46 !important;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+p.type-box.water {
+  background: #3498f9;
+  height: 21px;
+  font-size: 14px;
+  border-radius: 6px !important;
+  box-shadow: 2px 2px #285e46 !important;
+  margin-right: 4px;
+  margin-left: 4px;
 }
