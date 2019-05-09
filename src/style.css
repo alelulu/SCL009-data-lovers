@@ -193,7 +193,16 @@ p.type-box.water {
 /*<-- Pkmn types*/
 
 /*Footer -->*/
+footer#footer {
+  background-color: #367e55;
+  margin-top: 20px;
+}
 div.footer-text{
   text-align: center;
+  margin-top: 10px;
+}
+p#footer-text {
+  padding-top: 15px;
+  color: #ffffff;
 }
 /*<-- Footer*/
