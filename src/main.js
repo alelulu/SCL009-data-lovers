@@ -19,18 +19,23 @@ pageReset.forEach(element =>{
 
 //Function to show cards
 let showPkmn = (arr) => {
-  //Calling function to calculate the total number of pkmn showed
+	//Calling function to calculate the total number of pkmn showed
 	let pkmnCount = document.getElementById("pkmn-count");
 	let pknmPage = window.data.calculate(arr);
-  pkmnCount.innerHTML = "En este grupo hay un total de "+pknmPage+" Pokémon";
+	let showingCount = document.createElement("h4")
+	showingCount.classList.add("showing-count");
+	showingCount.innerHTML = "En este grupo hay un total de "+pknmPage+" Pokémon";
+	pkmnCount.innerHTML = " ";
+	pkmnCount.appendChild(showingCount);
   //Calling empty div to create cards
   let pkmnBoxes = document.getElementById("boxes");
   pkmnBoxes.innerHTML = " ";
   let box = document.createElement("div");
 	box.classList.add("row");
   box.classList.add("justify-content-center");
-
+	
 	for (let i = 0; i < arr.length; i++) {
+		//Creating cards
 		let pkmnContainer = document.createElement('div');
 		pkmnContainer.classList.add("card");
 		pkmnContainer.classList.add("side");

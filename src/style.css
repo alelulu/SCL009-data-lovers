@@ -37,14 +37,17 @@ img#logo-pkmn {
 /*<-- Navbar*/
 
 /*Calculate text -->*/
-h4#pkmn-count {
-  font-weight: bold;
+h4.showing-count {
+  font-weight: bold !important;
   text-align: center;
   margin-top: 2%;
 }
 /*<-- Calculate text*/
 
 /*Banner image -->*/
+div.img-banner{
+  text-align: center;
+}
 img#img-banner {
   width: 600px;
   margin-bottom: 10px;
@@ -259,3 +262,9 @@ p.type-box.water {
   margin-left: 4px;
 }
 /*<-- Pkmn types*/
+
+/*Footer -->*/
+div.footer-text{
+  text-align: center;
+}
+/*<-- Footer*/
