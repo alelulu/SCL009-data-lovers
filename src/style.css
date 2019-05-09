@@ -3,7 +3,7 @@
 
 body {
   font-family: 'Signika', sans-serif !important;
-  background-color: #79cd9d !important;
+  background-color: #a0e8bf !important;
   color: #1e2d5e !important;
 }
 
@@ -46,13 +46,13 @@ body {
 }
 .pkmn-container {
   color: #ffffff;
-  background-color: #259262 !important;
+  background-color: #58ac7c !important;
   text-align: center;
   margin: 10px 20px !important;
   padding: 0 !important;
   border-radius: 20%;
   width: 300px;
-  box-shadow: 4px 4px #285e46 !important;
+  box-shadow: 4px 4px #367e55 !important;
 }
 h4#pkmn-count {
   font-weight: bold;
@@ -67,9 +67,10 @@ img#pkmn-img {
   padding-top: 15px !important;
   padding-bottom: 15px !important;
 }
+
 nav#nav-menu {
-  background-color: #259262 !important;
-  box-shadow: 0px 4px #285e46 !important;
+  background-color: #58ac7c !important;
+  box-shadow: 0px 4px #367e55 !important;
   font-size: 18px;
 }
 a.a-text {
@@ -85,11 +86,11 @@ a#index-text {
   color: #ffffff;
 }  
 .dropdown-item:hover {
-  background-color: #259262 !important;
+  background-color: #58ac7c !important;
   color: #ffffff;
 } 
 div.dropdown-menu {
-  background-color: #285e46;
+  background-color: #367e55;
 }
 img#logo-pkmn {
   margin-right: 5px;
@@ -106,10 +107,9 @@ ul {
   padding-bottom: 2px;
 }
 
-li.weaknes-list {
-  padding-bottom: 2px;
-  margin: 0;
-  height: 15px !important;
+div.side ul li {
+  height: 20px;
+  padding-right: 30px;
 }
 
 div.types {
@@ -121,7 +121,7 @@ p.type-box.bug {
   height: 21px;
   font-size: 14px;
   border-radius: 6px !important;
-  box-shadow: 2px 2px #285e46 !important;
+  box-shadow: 2px 2px #367e55 !important;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -130,7 +130,7 @@ p.type-box.dragon {
   height: 21px;
   font-size: 14px;
   border-radius: 6px !important;
-  box-shadow: 2px 2px #285e46 !important;
+  box-shadow: 2px 2px #367e55 !important;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -139,7 +139,7 @@ p.type-box.electric {
   height: 21px;
   font-size: 14px;
   border-radius: 6px !important;
-  box-shadow: 2px 2px #285e46 !important;
+  box-shadow: 2px 2px #367e55 !important;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -148,7 +148,7 @@ p.type-box.fighting{
   height: 21px;
   font-size: 14px;
   border-radius: 6px !important;
-  box-shadow: 2px 2px #285e46 !important;
+  box-shadow: 2px 2px #367e55 !important;
   margin-right: 2px;
   margin-left: 2px;
 }
@@ -157,7 +157,7 @@ p.type-box.fire {
   height: 21px;
   font-size: 14px;
   border-radius: 6px !important;
-  box-shadow: 2px 2px #285e46 !important;
+  box-shadow: 2px 2px #367e55 !important;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -166,7 +166,7 @@ p.type-box.flying {
   height: 21px;
   font-size: 14px;
   border-radius: 6px !important;
-  box-shadow: 2px 2px #285e46 !important;
+  box-shadow: 2px 2px #367e55 !important;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -175,7 +175,7 @@ p.type-box.ghost {
   height: 21px;
   font-size: 14px;
   border-radius: 6px !important;
-  box-shadow: 2px 2px #285e46 !important;
+  box-shadow: 2px 2px #367e55 !important;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -184,7 +184,7 @@ p.type-box.grass {
   height: 21px;
   font-size: 14px;
   border-radius: 6px !important;
-  box-shadow: 2px 2px #285e46 !important;
+  box-shadow: 2px 2px #367e55 !important;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -193,7 +193,7 @@ p.type-box.ground {
   height: 21px;
   font-size: 14px;
   border-radius: 6px !important;
-  box-shadow: 2px 2px #285e46 !important;
+  box-shadow: 2px 2px #367e55 !important;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -202,7 +202,7 @@ p.type-box.ice {
   height: 21px;
   font-size: 14px;
   border-radius: 6px !important;
-  box-shadow: 2px 2px #285e46 !important;
+  box-shadow: 2px 2px #367e55 !important;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -211,7 +211,7 @@ p.type-box.normal {
   height: 21px;
   font-size: 14px;
   border-radius: 6px !important;
-  box-shadow: 2px 2px #285e46 !important;
+  box-shadow: 2px 2px #367e55 !important;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -220,7 +220,7 @@ p.type-box.poison {
   height: 21px;
   font-size: 14px;
   border-radius: 6px !important;
-  box-shadow: 2px 2px #285e46 !important;
+  box-shadow: 2px 2px #367e55 !important;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -229,7 +229,7 @@ p.type-box.psychic {
   height: 21px;
   font-size: 14px;
   border-radius: 6px !important;
-  box-shadow: 2px 2px #285e46 !important;
+  box-shadow: 2px 2px #367e55 !important;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -238,7 +238,7 @@ p.type-box.rock {
   height: 21px;
   font-size: 14px;
   border-radius: 6px !important;
-  box-shadow: 2px 2px #285e46 !important;
+  box-shadow: 2px 2px #367e55 !important;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -247,7 +247,7 @@ p.type-box.water {
   height: 21px;
   font-size: 14px;
   border-radius: 6px !important;
-  box-shadow: 2px 2px #285e46 !important;
+  box-shadow: 2px 2px #367e55 !important;
   margin-right: 4px;
   margin-left: 4px;
 }
