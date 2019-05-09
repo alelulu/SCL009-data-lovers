@@ -78,6 +78,9 @@ a.a-text {
 a.a-text:hover {
   font-weight: bold !important;
 }
+a#index-text {
+  line-height: 0 !important;
+}
 .dropdown-item {
   color: #ffffff;
 }  
@@ -93,11 +96,9 @@ img#logo-pkmn {
 }
 
 img#img-banner {
-display:block;
-position: relative;
-margin:auto;
-margin-bottom: 10px !important;
-margin-top: 10px !important;
+  width: 600px;
+  margin-bottom: 10px !important;
+  margin-top: 10px !important;
 }
 
 ul {
