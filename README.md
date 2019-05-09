@@ -1,5 +1,7 @@
 # DATADEX
 
+![prototipo1](src/assets/banner.png)
+
 **Pokémon GO** es un videojuego de realidad aumentada basado en la localización desarrollado por Niantic, Inc.1​2​ para dispositivos iOS y Android. Es un videojuego gratuito, pero contiene microtransacciones. ​ El juego consiste en buscar y capturar personajes de la saga Pokémon escondidos en ubicaciones del mundo real y luchar con ellos, lo que implica desplazarse físicamente por las calles de la ciudad para progresar. La aplicación comporta un elemento de interacción social, ya que promueve reuniones físicas de los usuarios en distintas ubicaciones de sus poblaciones.
 
 **DataDex** es una aplicación web que busca apoyar con información a los jugadores de nivel bajo e intermedio en su camino por convertirse en jugadores avanzados en Pokémon Go.
@@ -41,10 +43,14 @@ Quiero poder ordenar los Pokémon por nombre de manera ascendiente y descendient
 
 ### Criterios de aceptación
 Para esto incorporamos un menú desplegable en el inicio que será de fácil acceso. En este menú, le daremos al usuario 4 opciones de orden. Al oprimir la opción elegida los Pokémon en pantalla se reordenarán. Las opciones a escoger son:
-    • Por número, que es la forma por defecto en que se muestran.
-    • Por número descendiente en caso de que el usuario necesite llegar al último en la lista.
-    • Por orden alfabético de la A-Z, que le permitirá al usuario buscar un nombre en específico de manera más fácil.
-    • Por orden alfabético de la Z-A, que le permitirá al usuario buscar un nombre en específico de manera más fácil si el Pokémon comienza con Z, como “Zapdos” por ejemplo.
+
+• Por número, que es la forma por defecto en que se muestran.
+
+• Por número descendiente en caso de que el usuario necesite llegar al último en la lista.
+
+• Por orden alfabético de la A-Z, que le permitirá al usuario buscar un nombre en específico de manera más fácil.
+
+• Por orden alfabético de la Z-A, que le permitirá al usuario buscar un nombre en específico de manera más fácil si el Pokémon comienza con Z, como “Zapdos” por ejemplo.
 
 4. “Yo, como jugador de nivel bajo o intermedio de Pokémon Go…”
 Quiero poder saber cuántos son los Pokémon que estoy filtrando por tipo y huevo para no tener que contarlos.
@@ -72,7 +78,7 @@ La tipografía elegida es _Signika_, ya que es la utilizada en la página oficia
 
 El primer paso fue diseñar un diagrama de flujo para estructurar cómo sería el movimiento del usuario dentro de la aplicación.
 
-![prototipo1](src/assets/diagrama.png)
+![diagrama](src/assets/diagrama.png)
      
 ## Prototipo de baja fidelidad
 
