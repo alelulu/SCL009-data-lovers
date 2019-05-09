@@ -53,6 +53,11 @@ img#img-banner {
   margin-bottom: 10px;
   margin-top: 10px;
 }
+@media screen and (max-width: 980px) {
+  img#img-banner {
+    display: none;
+  }
+}
 /*<-- Banner image*/
 
 /*Cards -->*/
