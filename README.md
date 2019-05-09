@@ -12,7 +12,7 @@
     
 • Para descargar el juego o ver sus actualizaciones [clic aquí](https://pokemongolive.com/es/)
    
- • Para acceder a DataDex clic aquí (link githubpages)
+ • Para acceder a DataDex [clic aquí](https://alelulu.github.io/SCL009-data-lovers/src/index.html)
 
 # Definición del usuario
 Comenzamos enfocando nuestra aplicación a todos los jugadores de Pokémon Go. Mediante la realización de los tests de usuario fuimos infiriendo que los jugadores avanzados o con más conocimientos y experiencia no necesitaban de los datos que podíamos entregar con nuestra aplicación, por lo que definimos que el usuario final serían jugadores de Pokémon Go de nivel bajo e intermedio que necesitaran conocer información valiosa y precisa de los Pokémon de la región de Kanto, los tipos elementales o los tipos de huevos por kilómetro.
