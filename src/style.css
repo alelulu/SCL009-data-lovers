@@ -131,32 +131,22 @@ div.side ul li {
 div.types {
   padding: 0;
 }
-p.type-box.bug {
-  background: #a6b241;
+p.type-box {
   height: 21px;
   font-size: 14px;
   border-radius: 6px;
   box-shadow: 2px 2px #367e55;
   margin-right: 4px;
   margin-left: 4px;
+}
+p.type-box.bug {
+  background: #a6b241;
 }
 p.type-box.dragon {
   background: #6c5bbb;
-  height: 21px;
-  font-size: 14px;
-  border-radius: 6px;
-  box-shadow: 2px 2px #367e55;
-  margin-right: 4px;
-  margin-left: 4px;
 }
 p.type-box.electric {
   background: #eed535;
-  height: 21px;
-  font-size: 14px;
-  border-radius: 6px;
-  box-shadow: 2px 2px #367e55;
-  margin-right: 4px;
-  margin-left: 4px;
 }
 p.type-box.fighting{
   background: #b85945;
@@ -169,102 +159,36 @@ p.type-box.fighting{
 }
 p.type-box.fire {
   background: #f14730;
-  height: 21px;
-  font-size: 14px;
-  border-radius: 6px;
-  box-shadow: 2px 2px #367e55;
-  margin-right: 4px;
-  margin-left: 4px;
 }
 p.type-box.flying {
   background: #678fcf;
-  height: 21px;
-  font-size: 14px;
-  border-radius: 6px;
-  box-shadow: 2px 2px #367e55;
-  margin-right: 4px;
-  margin-left: 4px;
 }
 p.type-box.ghost {
   background: #363453;
-  height: 21px;
-  font-size: 14px;
-  border-radius: 6px;
-  box-shadow: 2px 2px #367e55;
-  margin-right: 4px;
-  margin-left: 4px;
 }
 p.type-box.grass {
   background: #7dc95d;
-  height: 21px;
-  font-size: 14px;
-  border-radius: 6px;
-  box-shadow: 2px 2px #367e55;
-  margin-right: 4px;
-  margin-left: 4px;
 }
 p.type-box.ground {
   background: #d7bb56;
-  height: 21px;
-  font-size: 14px;
-  border-radius: 6px;
-  box-shadow: 2px 2px #367e55;
-  margin-right: 4px;
-  margin-left: 4px;
 }
 p.type-box.ice {
   background: #6bb0c3;
-  height: 21px;
-  font-size: 14px;
-  border-radius: 6px;
-  box-shadow: 2px 2px #367e55;
-  margin-right: 4px;
-  margin-left: 4px;
 }
 p.type-box.normal {
   background: #8b8382;
-  height: 21px;
-  font-size: 14px;
-  border-radius: 6px;
-  box-shadow: 2px 2px #367e55;
-  margin-right: 4px;
-  margin-left: 4px;
 }
 p.type-box.poison {
   background: #8a567e;
-  height: 21px;
-  font-size: 14px;
-  border-radius: 6px;
-  box-shadow: 2px 2px #367e55;
-  margin-right: 4px;
-  margin-left: 4px;
 }
 p.type-box.psychic {
   background: #d55a86;
-  height: 21px;
-  font-size: 14px;
-  border-radius: 6px !important;
-  box-shadow: 2px 2px #367e55 !important;
-  margin-right: 4px;
-  margin-left: 4px;
 }
 p.type-box.rock {
   background: #bfa965;
-  height: 21px;
-  font-size: 14px;
-  border-radius: 6px !important;
-  box-shadow: 2px 2px #367e55 !important;
-  margin-right: 4px;
-  margin-left: 4px;
 }
 p.type-box.water {
   background: #3498f9;
-  height: 21px;
-  font-size: 14px;
-  border-radius: 6px;
-  box-shadow: 2px 2px #367e55;
-  margin-right: 4px;
-  margin-left: 4px;
 }
 /*<-- Pkmn types*/
 

@@ -117,7 +117,7 @@ let showPkmn = (arr) => {
 let typeItems = document.querySelectorAll("button.type-item");
 typeItems.forEach(element => {
 	element.addEventListener("click", () => {
-		showPkmn(window.data.filterType(pkmnArray, element.getAttribute('type-name')));
+		showPkmn(window.data.filterType(pkmnArray, element.getAttribute("value")));
 	});
 });
 
@@ -125,7 +125,7 @@ typeItems.forEach(element => {
 let eggItems = document.querySelectorAll("button.egg-item");
 eggItems.forEach(element => {
 	element.addEventListener("click", () => {
-		showPkmn(window.data.filterEgg(pkmnArray, element.getAttribute("egg-km")))
+		showPkmn(window.data.filterEgg(pkmnArray, element.getAttribute("value")))
 	})
 })
 
@@ -133,7 +133,7 @@ eggItems.forEach(element => {
 let orderedBy = document.querySelectorAll("button.ordered-by");
 orderedBy.forEach(element => {
 	element.addEventListener("click", () => {
-		showPkmn(window.data.orderingBy(getCurrentArray(), element.getAttribute("ordered-by"), element.getAttribute("sort-order")));
+		showPkmn(window.data.orderingBy(getCurrentArray(), element.getAttribute("value"), element.getAttribute("name")));
 	})
 })
 
