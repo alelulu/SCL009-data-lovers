@@ -112,7 +112,7 @@ Luego de nuestro testeo desarrollamos este diseño de Interfaz de usuario con al
 
 [Versión-móvil](https://www.figma.com/file/fWCrFT1j13OmD2tHWROboOE5/DataLovers?node-id=0%3A1)
 
-*Nota: Allison, recuerda nuestro problema en Zeplin por favor, problema con componentes. Gracias
+*Nota: Allison, recuerda nuestro problema con los componentes en Zeplin por favor. Gracias
 
 ## Conclusión 
 

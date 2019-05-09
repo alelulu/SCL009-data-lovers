@@ -6,68 +6,7 @@ body {
   background-color: #a0e8bf !important;
   color: #1e2d5e !important;
 }
-
-.card-container {
-  cursor: pointer;
-  height: 150px;
-  perspective: 600;
-  position: relative;
-  width: 150px;
-}
-.card {
-  border-radius: 20px;
-  height: 250px;
-  /*position: absolute;*/
-  transform-style: preserve-3d;
-  transition: all 1s ease-in-out;
-  width: 100%;
-}
-.card:hover {
-  transform: rotateY(180deg);
-}
-.card .side {
-  backface-visibility: hidden;
-  border-radius: 20px !important;
-  height: 250px;
-  position: absolute;
-  overflow: hidden;
-  width: 100%;
-}
-.card .back {
-  background: #1e2d5e;
-  color: #ffffff;
-  line-height: 100px;
-  text-align: center;
-  transform: rotateY(180deg);
-  border-radius: 40px !important;
-}
-.side p {
-  height: 10px;
-}
-.pkmn-container {
-  color: #ffffff;
-  background-color: #58ac7c !important;
-  text-align: center;
-  margin: 10px 20px !important;
-  padding: 0 !important;
-  border-radius: 20%;
-  width: 300px;
-  box-shadow: 4px 4px #367e55 !important;
-}
-h4#pkmn-count {
-  font-weight: bold;
-  text-align: center;
-  margin-top: 2%;
-}
-h6.pkmn-name {
-  font-size: 18px;
-  margin-top: 20px;
-}
-img#pkmn-img {
-  padding-top: 15px !important;
-  padding-bottom: 15px !important;
-}
-
+/*Navbar -->*/
 nav#nav-menu {
   background-color: #58ac7c !important;
   box-shadow: 0px 4px #367e55 !important;
@@ -86,7 +25,7 @@ a#index-text {
   color: #ffffff;
 }  
 .dropdown-item:hover {
-  background-color: #58ac7c !important;
+  background-color: #58ac7c;
   color: #ffffff;
 } 
 div.dropdown-menu {
@@ -95,33 +34,101 @@ div.dropdown-menu {
 img#logo-pkmn {
   margin-right: 5px;
 }
+/*<-- Navbar*/
 
+/*Calculate text -->*/
+h4#pkmn-count {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2%;
+}
+/*<-- Calculate text*/
+
+/*Banner image -->*/
 img#img-banner {
   width: 600px;
-  margin-bottom: 10px !important;
-  margin-top: 10px !important;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
+/*<-- Banner image*/
 
+/*Cards -->*/
+.card-container {
+  cursor: pointer;
+  height: 150px;
+  perspective: 600;
+  width: 150px;
+}
+.card {
+  border-radius: 20px;
+  height: 250px;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+.side p {
+  height: 10px;
+}
+.pkmn-container {
+  color: #ffffff;
+  background-color: #58ac7c !important;
+  text-align: center;
+  margin: 10px 20px !important;
+  padding: 0 !important;
+  border-radius: 20%;
+  width: 300px;
+  box-shadow: 4px 4px #367e55 !important;
+}
+h6.pkmn-name {
+  font-size: 18px;
+  margin-top: 20px;
+}
+img#pkmn-img {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+/*<-- Cards*/
+
+/*Back card -->*/
+.card .side {
+  backface-visibility: hidden;
+  border-radius: 20px !important;
+  height: 250px;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+.card .back {
+  background: #1e2d5e;
+  color: #ffffff;
+  line-height: 100px;
+  text-align: center;
+  transform: rotateY(180deg);
+  border-radius: 40px !important;
+}
 ul {
   list-style: none;
   padding-bottom: 2px;
 }
-
 div.side ul li {
   height: 20px;
   padding-right: 30px;
 }
+/*<-- Back card*/
 
+/*Pkmn types -->*/
 div.types {
-  padding: 0 !important;
+  padding: 0;
 }
-
 p.type-box.bug {
   background: #a6b241;
   height: 21px;
   font-size: 14px;
-  border-radius: 6px !important;
-  box-shadow: 2px 2px #367e55 !important;
+  border-radius: 6px;
+  box-shadow: 2px 2px #367e55;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -129,8 +136,8 @@ p.type-box.dragon {
   background: #6c5bbb;
   height: 21px;
   font-size: 14px;
-  border-radius: 6px !important;
-  box-shadow: 2px 2px #367e55 !important;
+  border-radius: 6px;
+  box-shadow: 2px 2px #367e55;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -138,8 +145,8 @@ p.type-box.electric {
   background: #eed535;
   height: 21px;
   font-size: 14px;
-  border-radius: 6px !important;
-  box-shadow: 2px 2px #367e55 !important;
+  border-radius: 6px;
+  box-shadow: 2px 2px #367e55;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -147,8 +154,8 @@ p.type-box.fighting{
   background: #b85945;
   height: 21px;
   font-size: 14px;
-  border-radius: 6px !important;
-  box-shadow: 2px 2px #367e55 !important;
+  border-radius: 6px;
+  box-shadow: 2px 2px #367e55;
   margin-right: 2px;
   margin-left: 2px;
 }
@@ -156,8 +163,8 @@ p.type-box.fire {
   background: #f14730;
   height: 21px;
   font-size: 14px;
-  border-radius: 6px !important;
-  box-shadow: 2px 2px #367e55 !important;
+  border-radius: 6px;
+  box-shadow: 2px 2px #367e55;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -165,8 +172,8 @@ p.type-box.flying {
   background: #678fcf;
   height: 21px;
   font-size: 14px;
-  border-radius: 6px !important;
-  box-shadow: 2px 2px #367e55 !important;
+  border-radius: 6px;
+  box-shadow: 2px 2px #367e55;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -174,8 +181,8 @@ p.type-box.ghost {
   background: #363453;
   height: 21px;
   font-size: 14px;
-  border-radius: 6px !important;
-  box-shadow: 2px 2px #367e55 !important;
+  border-radius: 6px;
+  box-shadow: 2px 2px #367e55;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -183,8 +190,8 @@ p.type-box.grass {
   background: #7dc95d;
   height: 21px;
   font-size: 14px;
-  border-radius: 6px !important;
-  box-shadow: 2px 2px #367e55 !important;
+  border-radius: 6px;
+  box-shadow: 2px 2px #367e55;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -192,8 +199,8 @@ p.type-box.ground {
   background: #d7bb56;
   height: 21px;
   font-size: 14px;
-  border-radius: 6px !important;
-  box-shadow: 2px 2px #367e55 !important;
+  border-radius: 6px;
+  box-shadow: 2px 2px #367e55;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -201,8 +208,8 @@ p.type-box.ice {
   background: #6bb0c3;
   height: 21px;
   font-size: 14px;
-  border-radius: 6px !important;
-  box-shadow: 2px 2px #367e55 !important;
+  border-radius: 6px;
+  box-shadow: 2px 2px #367e55;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -210,8 +217,8 @@ p.type-box.normal {
   background: #8b8382;
   height: 21px;
   font-size: 14px;
-  border-radius: 6px !important;
-  box-shadow: 2px 2px #367e55 !important;
+  border-radius: 6px;
+  box-shadow: 2px 2px #367e55;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -219,8 +226,8 @@ p.type-box.poison {
   background: #8a567e;
   height: 21px;
   font-size: 14px;
-  border-radius: 6px !important;
-  box-shadow: 2px 2px #367e55 !important;
+  border-radius: 6px;
+  box-shadow: 2px 2px #367e55;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -246,8 +253,9 @@ p.type-box.water {
   background: #3498f9;
   height: 21px;
   font-size: 14px;
-  border-radius: 6px !important;
-  box-shadow: 2px 2px #367e55 !important;
+  border-radius: 6px;
+  box-shadow: 2px 2px #367e55;
   margin-right: 4px;
   margin-left: 4px;
 }
+/*<-- Pkmn types*/

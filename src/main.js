@@ -1,8 +1,6 @@
-/* Manejo del DOM */
-//acá va cómo se muestra la info (tabla)
-//Declaramos variable para llamar array
+// Calling the data
 let pkmnArray = window.POKEMON.pokemon;
-//Mostrando en index todos los pkmn; llamamos a la funcion showPkmn con el load del body
+
 let indexPage = document.getElementById("index-page");
 if (indexPage != null){
 	window.addEventListener("load",() => {
@@ -10,7 +8,7 @@ if (indexPage != null){
 		showPkmn(pkmnArray);
 	})
 }
-//Para que se resetee y vuelva a mostrar en orden por id. Usamos querySelectorAll para la clase reset. Llamamos a la funion showPkmn
+
 let pageReset = document.querySelectorAll(".reset");
 pageReset.forEach(element =>{
 	element.addEventListener("click", () => {
@@ -19,18 +17,19 @@ pageReset.forEach(element =>{
 	})
 })
 
-//Función para mostrar en cajitas responsivas los Pkmn y sus datos respectivos. Creamos div dinámico dentro de nuestro div del html ("boxes")
+//Function to show cards
 let showPkmn = (arr) => {
-	let pkmnBoxes = document.getElementById("boxes");
-	pkmnBoxes.innerHTML = " ";
+  //Calling function to calculate the total number of pkmn showed
 	let pkmnCount = document.getElementById("pkmn-count");
 	let pknmPage = window.data.calculate(arr);
-	pkmnCount.innerHTML = "En este grupo hay un total de "+pknmPage+" Pokémon";
-  //Creamos un div para la clase row y lo alineamos (responsive)
+  pkmnCount.innerHTML = "En este grupo hay un total de "+pknmPage+" Pokémon";
+  //Calling empty div to create cards
+  let pkmnBoxes = document.getElementById("boxes");
+  pkmnBoxes.innerHTML = " ";
   let box = document.createElement("div");
 	box.classList.add("row");
   box.classList.add("justify-content-center");
-  //Para que revise cada dato del array lo pasamos por un for. Dentro de este creamos un div con clases col y llamamos datos desde la data
+
 	for (let i = 0; i < arr.length; i++) {
 		let pkmnContainer = document.createElement('div');
 		pkmnContainer.classList.add("card");
@@ -39,24 +38,26 @@ let showPkmn = (arr) => {
 		pkmnContainer.classList.add("col-sm-6");
 		pkmnContainer.classList.add("col-md-6");
 		pkmnContainer.classList.add("col-lg-2");
-		pkmnContainer.classList.add("container");
+    pkmnContainer.classList.add("container");
+    //Calling names from data
 		let pkmnNameRow = document.createElement("div");
 		pkmnNameRow.classList.add("row");
 		let pkmnNameCol = document.createElement("div");
 		pkmnNameCol.classList.add("col");
 		pkmnNameCol.innerHTML = "<h6 class='pkmn-name'>"+arr[i].name+" #"+arr[i].num+"</h6>";
 		pkmnNameRow.appendChild(pkmnNameCol);
-
+    //Calling images from data
 		let pkmnImgRow = document.createElement("div");
 		pkmnImgRow.classList.add("row");
 		let pkmnImgCol = document.createElement("div");
 		pkmnImgCol.classList.add("col");
 		pkmnImgCol.innerHTML = "<img id='pkmn-img' src='"+arr[i].img+"'>"
 		pkmnImgRow.appendChild(pkmnImgCol)
-
+    //Calling types from data
 		let pkmnTypeRow = document.createElement("div");
 		pkmnTypeRow.classList.add("row");
-		let pkmnTypeCol = document.createElement("div");
+    let pkmnTypeCol = document.createElement("div");
+    //Creating conditions to add style style to pkmn with two types
 		if(arr[i].type[1] != undefined) {
 			let pkmnTypeCol1 = document.createElement("div");
 			pkmnTypeCol1.classList.add("col-3");
@@ -69,10 +70,10 @@ let showPkmn = (arr) => {
 			pkmnTypeCol1.innerHTML = "<p class=\"type-box "+typeClass1+"\" type-name=\""+arr[i].type[0]+"\">"+arr[i].type[0]+"</p>";
 			let typeClass2 = arr[i].type[1].toLowerCase();
 			pkmnTypeCol2.innerHTML = "<p class=\"type-box "+typeClass2+"\" type-name=\""+arr[i].type[1]+"\">"+arr[i].type[1]+"</p>";
-
 			pkmnTypeRow.appendChild(pkmnTypeCol1);
 			pkmnTypeRow.appendChild(pkmnTypeCol2);
-		}
+    }
+    //pkmn with only one type
 		else {
 			pkmnTypeCol = document.createElement("div");
 			pkmnTypeCol.classList.add("col-4");
@@ -80,24 +81,24 @@ let showPkmn = (arr) => {
 			pkmnTypeCol.classList.add("types");
 			let typeClass = arr[i].type[0].toLowerCase();
 			pkmnTypeCol.innerHTML = "<p class=\"type-box "+typeClass+"\" type-name=\""+arr[i].type[0]+"\">"+arr[i].type[0]+"</p>";
-
 			pkmnTypeRow.appendChild(pkmnTypeCol);
 		}
 		pkmnContainer.appendChild(pkmnNameRow);
 		pkmnContainer.appendChild(pkmnImgRow);
 		pkmnContainer.appendChild(pkmnTypeRow);
 
+    //Creating flip card
 		let backCard = document.createElement('div');
 		backCard.classList.add("side");
 		backCard.classList.add("back")
 		backCard.innerHTML = `<p> ⚖️ Peso: ${arr[i].weight}</p>
 		<p> ⬆️ Altura: ${arr[i].height}</p>
-		<p> 😧 Debilidades: </p>`;
+    <p> 😧 Debilidades: </p>`;
+    //Creating list to show weaknesses
 		let weaknessList = document.createElement("ul");
 		weaknessList.innerHTML = " ";
 		arr[i].weaknesses.forEach(element => {
 			weaknessList.innerHTML += "<li class=\"weakness-list\">"+element+"</li>";
-			console.log(element);
 		});
 		backCard.appendChild(weaknessList);
 
@@ -107,7 +108,7 @@ let showPkmn = (arr) => {
   pkmnBoxes.appendChild(box);
 }
 
-//filtrando tipo en dom (llamando a nuestra función)
+//Calling function to filter by type
 let typeItems = document.querySelectorAll("button.type-item");
 typeItems.forEach(element => {
 	element.addEventListener("click", () => {
@@ -115,15 +116,15 @@ typeItems.forEach(element => {
 	});
 });
 
-//filtrando huevos en dom (llamando a nuestra función)
+//Calling function to filter by egg
 let eggItems = document.querySelectorAll("button.egg-item");
 eggItems.forEach(element => {
 	element.addEventListener("click", () => {
 		showPkmn(window.data.filterEgg(pkmnArray, element.getAttribute("egg-km")))
 	})
 })
-//console.log(filterEgg(pkmnArray, "2 km"))
 
+//Calling function to order the data
 let orderedBy = document.querySelectorAll("button.ordered-by");
 orderedBy.forEach(element => {
 	element.addEventListener("click", () => {
@@ -131,7 +132,7 @@ orderedBy.forEach(element => {
 	})
 })
 
+//Calling function to get our saved actual array
 const getCurrentArray = () => {
-	//Aquí llamamos al campo del objeto window que guardamos con la función saveCurrentArray
 	return window.currentArray
 }
