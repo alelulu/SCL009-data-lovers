@@ -1,13 +1,99 @@
 // Calling the data
-let pkmnArray = window.POKEMON.pokemon;
+//let pkmnArray = window.POKEMON.pokemon;
 
-let indexPage = document.getElementById("index-page");
-if (indexPage != null){
-	window.addEventListener("load",() => {
-		window.currentArray = pkmnArray;
-		showPkmn(pkmnArray);
-	})
-}
+fetch("https://raw.githubusercontent.com/alelulu/SCL009-data-lovers/master/src/data/pokemon/pokemon.json")
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+		const pkmnArray = data.pokemon;
+    console.log(pkmnArray);
+
+
+			//Calling empty div to create cards
+			let pkmnBoxes = document.getElementById("boxes");
+			pkmnBoxes.innerHTML = " ";
+			let box = document.createElement("div");
+			box.classList.add("row");
+			box.classList.add("justify-content-center");
+			
+			for (let i = 0; i < pkmnArray.length; i++) {
+				//Creating cards
+				let pkmnContainer = document.createElement('div');
+				pkmnContainer.classList.add("card");
+				pkmnContainer.classList.add("side");
+				pkmnContainer.classList.add("pkmn-container");
+				pkmnContainer.classList.add("col-sm-6");
+				pkmnContainer.classList.add("col-md-6");
+				pkmnContainer.classList.add("col-lg-2");
+				pkmnContainer.classList.add("container");
+				//Calling names from data
+				let pkmnNameRow = document.createElement("div");
+				pkmnNameRow.classList.add("row");
+				let pkmnNameCol = document.createElement("div");
+				pkmnNameCol.classList.add("col");
+				pkmnNameCol.innerHTML = "<h6 class='pkmn-name'>"+pkmnArray[i].name+" #"+pkmnArray[i].num+"</h6>";
+				pkmnNameRow.appendChild(pkmnNameCol);
+				//Calling images from data
+				let pkmnImgRow = document.createElement("div");
+				pkmnImgRow.classList.add("row");
+				let pkmnImgCol = document.createElement("div");
+				pkmnImgCol.classList.add("col");
+				pkmnImgCol.innerHTML = "<img id='pkmn-img' src='"+pkmnArray[i].img+"'>"
+				pkmnImgRow.appendChild(pkmnImgCol)
+				//Calling types from data
+				let pkmnTypeRow = document.createElement("div");
+				pkmnTypeRow.classList.add("row");
+				let pkmnTypeCol = document.createElement("div");
+				//Creating conditions to add style style to pkmn with two types
+				if(pkmnArray[i].type[1] != undefined) {
+					let pkmnTypeCol1 = document.createElement("div");
+					pkmnTypeCol1.classList.add("col-3");
+					pkmnTypeCol1.classList.add("offset-3");
+					let pkmnTypeCol2 = document.createElement("div");
+					pkmnTypeCol2.classList.add("col-3");
+					pkmnTypeCol1.classList.add("types");
+					pkmnTypeCol2.classList.add("types");
+					let typeClass1 = pkmnArray[i].type[0].toLowerCase();
+					pkmnTypeCol1.innerHTML = "<p class=\"type-box "+typeClass1+"\" type-name=\""+pkmnArray[i].type[0]+"\">"+pkmnArray[i].type[0]+"</p>";
+					let typeClass2 = pkmnArray[i].type[1].toLowerCase();
+					pkmnTypeCol2.innerHTML = "<p class=\"type-box "+typeClass2+"\" type-name=\""+pkmnArray[i].type[1]+"\">"+pkmnArray[i].type[1]+"</p>";
+					pkmnTypeRow.appendChild(pkmnTypeCol1);
+					pkmnTypeRow.appendChild(pkmnTypeCol2);
+				}
+				//pkmn with only one type
+				else {
+					pkmnTypeCol = document.createElement("div");
+					pkmnTypeCol.classList.add("col-4");
+					pkmnTypeCol.classList.add("offset-4");
+					pkmnTypeCol.classList.add("types");
+					let typeClass = pkmnArray[i].type[0].toLowerCase();
+					pkmnTypeCol.innerHTML = "<p class=\"type-box "+typeClass+"\" type-name=\""+pkmnArray[i].type[0]+"\">"+pkmnArray[i].type[0]+"</p>";
+					pkmnTypeRow.appendChild(pkmnTypeCol);
+				}
+				pkmnContainer.appendChild(pkmnNameRow);
+				pkmnContainer.appendChild(pkmnImgRow);
+				pkmnContainer.appendChild(pkmnTypeRow);
+		
+				//Creating flip card
+				let backCard = document.createElement('div');
+				backCard.classList.add("side");
+				backCard.classList.add("back")
+				backCard.innerHTML = `<p> ⚖️ Peso: ${pkmnArray[i].weight}</p>
+				<p> ⬆️ Altura: ${pkmnArray[i].height}</p>
+				<p> 😧 Debilidades: </p>`;
+				//Creating list to show weaknesses
+				let weaknessList = document.createElement("ul");
+				weaknessList.innerHTML = " ";
+				pkmnArray[i].weaknesses.forEach(element => {
+					weaknessList.innerHTML += "<li class=\"weakness-list\">"+element+"</li>";
+				});
+				backCard.appendChild(weaknessList);
+		
+				pkmnContainer.appendChild(backCard);
+				box.appendChild(pkmnContainer);
+			}
+			pkmnBoxes.appendChild(box);
 
 let pageReset = document.querySelectorAll(".reset");
 pageReset.forEach(element =>{
@@ -141,3 +227,4 @@ orderedBy.forEach(element => {
 const getCurrentArray = () => {
 	return window.currentArray
 }
+});
