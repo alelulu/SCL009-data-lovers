@@ -3,17 +3,17 @@
 
 body {
   font-family: 'Signika', sans-serif !important;
-  background-color: #9cc5e6 !important;
+  background-color: #d3efd7 !important;
   color: #414a6a !important;
 }
 /*Navbar -->*/
 nav#nav-menu {
-  background-color: #414a6a !important;
-  box-shadow: 0px 4px #f6527b !important;
+  background-color: #83c396 !important;
+  box-shadow: 0px 4px #33818e !important;
   font-size: 18px;
 }
 a.a-text {
-  color: #bcc3dd !important;
+  color: #33818e !important;
 }
 a.a-text:hover {
   font-weight: bold !important;
@@ -22,14 +22,14 @@ a#index-text {
   line-height: 0 !important;
 }
 .dropdown-item {
-  color: #414a6a;
+  color: #d3efd7;
 }  
 .dropdown-item:hover {
-  background-color: #58ac7c;
+  background-color: #83c396;
   color: #ffffff;
 } 
 div.dropdown-menu {
-  background-color: #367e55;
+  background-color: #33818e;
 }
 img#logo-pkmn {
   margin-right: 5px;
@@ -82,13 +82,13 @@ img#img-banner {
 }
 .pkmn-container {
   color: #ffffff;
-  background-color: #414a6a !important;
+  background-color: #83c396 !important;
   text-align: center;
   margin: 10px 20px !important;
   padding: 0 !important;
   border-radius: 20%;
   width: 300px;
-  box-shadow: 4px 4px #f6527b !important;
+  box-shadow: 4px 4px #33818e !important;
 }
 h6.pkmn-name {
   font-size: 18px;
@@ -110,7 +110,7 @@ img#pkmn-img {
   width: 100%;
 }
 .card .back {
-  background: #1e2d5e;
+  background: #83c396;
   color: #ffffff;
   line-height: 100px;
   text-align: center;
@@ -135,7 +135,7 @@ p.type-box {
   height: 21px;
   font-size: 14px;
   border-radius: 6px;
-  box-shadow: 2px 2px #f6527b;
+  box-shadow: 2px 2px #33818e;
   margin-right: 4px;
   margin-left: 4px;
 }
@@ -194,7 +194,7 @@ p.type-box.water {
 
 /*Footer -->*/
 footer#footer {
-  background-color: #367e55;
+  background-color: #83c396;
   margin-top: 20px;
 }
 div.footer-text{
@@ -203,6 +203,6 @@ div.footer-text{
 }
 p#footer-text {
   padding-top: 15px;
-  color: #ffffff;
+  color: #33818e;
 }
 /*<-- Footer*/
