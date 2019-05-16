@@ -73,7 +73,7 @@ let showPkmn = (arr) => {
 		pkmnContainer.classList.add("side");
     pkmnContainer.classList.add("pkmn-container");
 		pkmnContainer.classList.add("col-sm-6");
-		pkmnContainer.classList.add("col-md-6");
+		pkmnContainer.classList.add("col-md-4");
 		pkmnContainer.classList.add("col-lg-2");
     pkmnContainer.classList.add("container");
     pkmnContainer.setAttribute("data-target", "#info-modal");

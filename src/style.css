@@ -13,6 +13,7 @@ body {
   background: linear-gradient(to bottom, rgba(71,131,123,1) 0%, rgba(151,232,187,1) 38%, rgba(151,232,187,1) 51%, rgba(151,232,187,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#47837b', endColorstr='#97e8bb', GradientType=0 );
   background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 /*Navbar -->*/
 nav#nav-menu {
