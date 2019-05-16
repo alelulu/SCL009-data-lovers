@@ -85,26 +85,26 @@
 
 
         <!-- Modal -->
-        <div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="container">
                 <div class="row">
-                  <div class="col">
+                  <div class="col-10 offset-1">
                     <h4 id="modal-title"></h4>
                   </div>
-                  <div class="col">
+                  <div class="col-1">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-sm-12 col-md-6">
-                    <img id="modal-img" src="" alt="">
+                  <div id="div-modal-img" class="col-sm-12 col-md-6">
+                    <img id="modal-img">
                   </div>
                   <div id="modal-pkmn-info" class="col-sm-12 col-md-6">
-                    <ul>
+                    <ul id="modal-ul">
                       <li id="modal-height" class="info-item"></li>
                       <li id="modal-weight" class="info-item"></li>
                       <li id="modal-candy" class="info-item"></li>
@@ -113,8 +113,8 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col">
-                    <h5>Debilidades</h5>
+                  <div id="weakness-div" class="col">
+                    <h5 id="weakness-title">Debilidades</h5>
                     <ul id="modal-weak"></ul>
                   </div>
                 </div>

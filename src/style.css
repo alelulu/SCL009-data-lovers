@@ -3,14 +3,24 @@
 
 body {
   font-family: 'Signika', sans-serif !important;
-  background-color: #d3efd7 !important;
   color: #414a6a !important;
+  background: rgba(71,131,123,1);
+  background: -moz-linear-gradient(top, rgba(71,131,123,1) 0%, rgba(151,232,187,1) 38%, rgba(151,232,187,1) 51%, rgba(151,232,187,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(71,131,123,1)), color-stop(38%, rgba(151,232,187,1)), color-stop(51%, rgba(151,232,187,1)), color-stop(100%, rgba(151,232,187,1)));
+  background: -webkit-linear-gradient(top, rgba(71,131,123,1) 0%, rgba(151,232,187,1) 38%, rgba(151,232,187,1) 51%, rgba(151,232,187,1) 100%);
+  background: -o-linear-gradient(top, rgba(71,131,123,1) 0%, rgba(151,232,187,1) 38%, rgba(151,232,187,1) 51%, rgba(151,232,187,1) 100%);
+  background: -ms-linear-gradient(top, rgba(71,131,123,1) 0%, rgba(151,232,187,1) 38%, rgba(151,232,187,1) 51%, rgba(151,232,187,1) 100%);
+  background: linear-gradient(to bottom, rgba(71,131,123,1) 0%, rgba(151,232,187,1) 38%, rgba(151,232,187,1) 51%, rgba(151,232,187,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#47837b', endColorstr='#97e8bb', GradientType=0 );
+  background-attachment: fixed;
 }
 /*Navbar -->*/
 nav#nav-menu {
-  background-color: #83c396 !important;
-  box-shadow: 0px 4px #33818e !important;
+  background-color: rgba(82,138,115,0.95) !important;
   font-size: 18px;
+  -webkit-box-shadow: 7px 7px 5px -8px rgba(0,0,0,0.75) !important;
+  -moz-box-shadow: 7px 7px 5px -8px rgba(0,0,0,0.75) !important;
+  box-shadow: 7px 7px 5px -8px rgba(0,0,0,0.75) !important;
 }
 a.a-text {
   color: #ffffff !important;
@@ -85,13 +95,15 @@ img#img-banner {
 }
 .pkmn-container {
   color: #ffffff;
-  background-color: #83c396 !important;
+  background-color: rgba(82,138,115,0.9);
   text-align: center;
   margin: 10px 20px !important;
   padding: 0 !important;
   border-radius: 20px;
   width: 300px;
-  box-shadow: 4px 4px #33818e !important;
+  -webkit-box-shadow: 7px 7px 5px -8px rgba(0,0,0,0.75) !important;
+  -moz-box-shadow: 7px 7px 5px -8px rgba(0,0,0,0.75) !important;
+  box-shadow: 7px 7px 5px -8px rgba(0,0,0,0.75) !important;
 }
 h6.pkmn-name {
   font-size: 18px;
@@ -131,6 +143,30 @@ div.side ul li {
  Back card*/
 
 /*modal -->*/
+
+.modal-backdrop
+{
+    opacity: 0.1 !important;
+}
+div.modal-content{
+  background-color: rgba(82,138,115,0.95);
+  color: #ffffff;
+  border-radius: 20px;
+}
+h4#modal-title {
+  text-align: center;
+  padding-top: 15px;
+}
+div#div-modal-img{
+  text-align: center;
+  padding-bottom: 15px;
+}
+div#modal-pkmn-info {
+  padding-top: 12px;
+}
+ul#modal-ul {
+  padding: 0;
+}
 li.info-item {
   list-style: none;
 }
@@ -143,6 +179,13 @@ li.weakness-list {
   padding: 5px;
   color: #ffffff;
 }
+h5#weakness-title {
+  text-align: center;
+  padding-bottom: 5px;
+}
+div#weakness-div {
+  padding-bottom: 15px;
+}
 /*<-- modal*/
  /*Pkmn types -->*/
 div.types {
@@ -152,9 +195,11 @@ p.type-box, li.type-box{
   height: 21px;
   font-size: 14px;
   border-radius: 6px;
-  box-shadow: 2px 2px #33818e;
   margin-right: 4px;
   margin-left: 4px;
+  -webkit-box-shadow: 7px 7px 5px -8px rgba(0,0,0,0.75) !important;
+  -moz-box-shadow: 7px 7px 5px -8px rgba(0,0,0,0.75) !important;
+  box-shadow: 7px 7px 5px -8px rgba(0,0,0,0.75) !important;
 }
 p.type-box.bug, li.type-box.bug {
   background: #a6b241;
@@ -214,7 +259,7 @@ p.type-box.water, li.type-box.water {
 
 /*Footer -->*/
 footer#footer {
-  background-color: #83c396;
+  background-color: rgba(82,138,115,0.95) !important;
   margin-top: 20px;
 }
 div.footer-text{
@@ -223,6 +268,6 @@ div.footer-text{
 }
 p#footer-text {
   padding-top: 15px;
-  color: #33818e;
+  color: #ffffff;
 }
 /*<-- Footer*/

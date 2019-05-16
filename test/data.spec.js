@@ -236,4 +236,24 @@ describe('data.calculate', () => {
   it('debería retornar el número total de array entregado', () => {
     assert.deepEqual(window.data.calculate(data), 3);
   });
-})
+});
+
+describe('data.getPkmnById', () => {
+  
+  it('debería ser una función', () => {
+    assert.equal(typeof window.data.getPkmnById, 'function');
+  });
+
+  it('debería retornar el objeto del id entregado', () => {
+    assert.deepEqual(window.data.getPkmnById(data, 1), {
+      "id": 1,
+      "num": "001",
+      "name": "Bulbasaur",
+      "egg": "2 km",
+      "type": [
+        "Grass",
+        "Poison"
+      ]
+    });
+  });
+});

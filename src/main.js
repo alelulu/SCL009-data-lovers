@@ -4,10 +4,10 @@
 //Calling JSON data
 window.addEventListener("load", () => {
   fetch("https://raw.githubusercontent.com/alelulu/SCL009-data-lovers/master/src/data/pokemon/pokemon.json")
-  .then(function(response) {
+  .then((response) => {
     return response.json();
   })
-  .then(function(data) {
+  .then((data) => {
 		const pkmnArray = data.pokemon;
     showPkmn(pkmnArray);
 
@@ -78,7 +78,7 @@ let showPkmn = (arr) => {
     pkmnContainer.classList.add("container");
     pkmnContainer.setAttribute("data-target", "#info-modal");
     pkmnContainer.setAttribute("data-toggle", "modal");
-    pkmnContainer.setAttribute("value", arr[i].id)
+    pkmnContainer.setAttribute("value", arr[i].id);
     //Calling names from data
 		let pkmnNameRow = document.createElement("div");
 		pkmnNameRow.classList.add("row");
@@ -152,7 +152,7 @@ let showPkmn = (arr) => {
 	pkmnContainers.forEach(element => {
 		element.addEventListener("click", () => {
 			let pkmnShowed = window.data.getPkmnById(arr, element.getAttribute("value"));
-			document.getElementById("modal-title").innerHTML = pkmnShowed.name;
+			document.getElementById("modal-title").innerHTML = pkmnShowed.name +" / # "+pkmnShowed.id;
 			document.getElementById("modal-img").src = pkmnShowed.img;
 			document.getElementById("modal-height").innerHTML = "Altura: "+pkmnShowed.height;
 			document.getElementById("modal-weight").innerHTML = "Peso: "+pkmnShowed.weight;
