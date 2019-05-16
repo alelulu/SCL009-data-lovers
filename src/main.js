@@ -153,7 +153,10 @@ let showPkmn = (arr) => {
 		element.addEventListener("click", () => {
 			let pkmnShowed = window.data.getPkmnById(arr, element.getAttribute("value"));
 			document.getElementById("modal-title").innerHTML = pkmnShowed.name +" / # "+pkmnShowed.id;
-			document.getElementById("modal-img").src = pkmnShowed.img;
+			let imgModal = document.getElementById("modal-img")
+			let pkmnImgModal = document.createElement("img")
+			pkmnImgModal.innerHTML = pkmnImgModal.setAttribute("src", pkmnShowed.img);
+			pkmnImgModal.innerHTML = pkmnImgModal.setAttribute("alt", "imagen pokémon");
 			document.getElementById("modal-height").innerHTML = "Altura: "+pkmnShowed.height;
 			document.getElementById("modal-weight").innerHTML = "Peso: "+pkmnShowed.weight;
 			document.getElementById("modal-candy").innerHTML = "Caramelo: "+pkmnShowed.candy;
@@ -164,6 +167,7 @@ let showPkmn = (arr) => {
 				let typeClass = weak.toLowerCase()
 				weaknessList.innerHTML += "<li class=\"weakness-list types type-box "+typeClass+"\">"+weak+"</li>";
 			});
+			imgModal.appendChild(pkmnImgModal);
 		})
 	})
 }
