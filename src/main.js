@@ -152,9 +152,14 @@ let showPkmn = (arr) => {
 	pkmnContainers.forEach(element => {
 		element.addEventListener("click", () => {
 			let pkmnShowed = window.data.getPkmnById(arr, element.getAttribute("value"));
-			document.getElementById("modal-title").innerHTML = pkmnShowed.name +" / # "+pkmnShowed.id;
-			let imgModal = document.getElementById("modal-img")
-			let pkmnImgModal = document.createElement("img")
+			let divModalTitle = document.getElementById("div-title-modal");
+			let modalTitle = document.createElement("h4");
+			divModalTitle.innerHTML = " ";
+			modalTitle.innerHTML = modalTitle.setAttribute("id", "modal-title");
+			modalTitle.innerHTML = pkmnShowed.name +" / # "+pkmnShowed.id;
+			let imgModal = document.getElementById("modal-img");
+			let pkmnImgModal = document.createElement("img");
+			imgModal.innerHTML = " ";
 			pkmnImgModal.innerHTML = pkmnImgModal.setAttribute("src", pkmnShowed.img);
 			pkmnImgModal.innerHTML = pkmnImgModal.setAttribute("alt", "imagen pokémon");
 			document.getElementById("modal-height").innerHTML = "Altura: "+pkmnShowed.height;
@@ -162,11 +167,12 @@ let showPkmn = (arr) => {
 			document.getElementById("modal-candy").innerHTML = "Caramelo: "+pkmnShowed.candy;
 			document.getElementById("modal-egg").innerHTML = "Eclosión: "+pkmnShowed.egg;
 			let weaknessList = document.getElementById("modal-weak");
-			weaknessList.innerHTML = " "
+			weaknessList.innerHTML = " ";
 			pkmnShowed.weaknesses.forEach(weak => {
-				let typeClass = weak.toLowerCase()
+				let typeClass = weak.toLowerCase();
 				weaknessList.innerHTML += "<li class=\"weakness-list types type-box "+typeClass+"\">"+weak+"</li>";
 			});
+			divModalTitle.appendChild(modalTitle);
 			imgModal.appendChild(pkmnImgModal);
 		})
 	})
