@@ -42,7 +42,15 @@ window.data = {
   // Function to calculate the array length
   calculate: (arr) => {
     return arr.length;
-  }
+  },
+
+  //Get pkmn by id
+  getPkmnById: (arr, id) => {
+    let idPkmn = arr.find(element => {
+      return element.id == id;
+    })
+    return idPkmn;
+  } 
 }
 
 // Other functions:

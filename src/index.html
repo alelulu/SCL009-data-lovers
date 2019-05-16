@@ -82,6 +82,46 @@
             <div id="boxes">
           </div>
         </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <h4 id="modal-title"></h4>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-md-6">
+                    <img id="modal-img" src="" alt="">
+                  </div>
+                  <div id="modal-pkmn-info" class="col-sm-12 col-md-6">
+                    <ul>
+                      <li id="modal-height" class="info-item"></li>
+                      <li id="modal-weight" class="info-item"></li>
+                      <li id="modal-candy" class="info-item"></li>
+                      <li id="modal-egg" class="info-item"></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <h5>Debilidades</h5>
+                    <ul id="modal-weak"></ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
     <footer id="footer">

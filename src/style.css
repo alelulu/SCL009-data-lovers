@@ -13,10 +13,10 @@ nav#nav-menu {
   font-size: 18px;
 }
 a.a-text {
-  color: #33818e !important;
+  color: #ffffff !important;
 }
 a.a-text:hover {
-  font-weight: bold !important;
+  color: #d3efd7 !important;
 }
 a#index-text {
   line-height: 0 !important;
@@ -74,9 +74,12 @@ img#img-banner {
   transition: all 1s ease-in-out;
   width: 100%;
 }
-.card:hover {
-  transform: rotateY(180deg);
+.pkmn-container:hover {
+  background-color: #33818e !important;
 }
+/*.card:hover {
+  transform: rotateY(180deg);
+}*/
 .side p {
   height: 10px;
 }
@@ -86,7 +89,7 @@ img#img-banner {
   text-align: center;
   margin: 10px 20px !important;
   padding: 0 !important;
-  border-radius: 20%;
+  border-radius: 20px;
   width: 300px;
   box-shadow: 4px 4px #33818e !important;
 }
@@ -101,7 +104,7 @@ img#pkmn-img {
 /*<-- Cards*/
 
 /*Back card -->*/
-.card .side {
+/*.card .side {
   backface-visibility: hidden;
   border-radius: 20px !important;
   height: 250px;
@@ -125,13 +128,26 @@ div.side ul li {
   height: 20px;
   padding-right: 30px;
 }
-/*<-- Back card*/
+ Back card*/
 
-/*Pkmn types -->*/
+/*modal -->*/
+li.info-item {
+  list-style: none;
+}
+ul#modal-weak {
+  text-align: center;
+}
+li.weakness-list {
+  display: inline;
+  padding: 5px;
+  color: #ffffff;
+}
+/*<-- modal*/
+ /*Pkmn types -->*/
 div.types {
   padding: 0;
 }
-p.type-box {
+p.type-box, li.type-box{
   height: 21px;
   font-size: 14px;
   border-radius: 6px;
@@ -139,55 +155,58 @@ p.type-box {
   margin-right: 4px;
   margin-left: 4px;
 }
-p.type-box.bug {
+p.type-box.bug, li.type-box.bug {
   background: #a6b241;
 }
-p.type-box.dragon {
+p.type-box.dark, li.type-box.dark {
+  background: #7e6a5e;
+}
+p.type-box.dragon, li.type-box.dragon {
   background: #6c5bbb;
 }
-p.type-box.electric {
+p.type-box.electric, li.type-box.electric {
   background: #eed535;
 }
-p.type-box.fighting{
-  background: #b85945;
-  height: 21px;
-  font-size: 14px;
-  border-radius: 6px;
-  box-shadow: 2px 2px #367e55;
-  margin-right: 2px;
-  margin-left: 2px;
+p.type-box.fairy, li.type-box.fairy{
+  background: #f0a5f2;
 }
-p.type-box.fire {
+p.type-box.fighting, li.type-box.fighting{
+  background: #b85945;
+}
+p.type-box.fire, li.type-box.fire{
   background: #f14730;
 }
-p.type-box.flying {
+p.type-box.flying, li.type-box.flying {
   background: #678fcf;
 }
-p.type-box.ghost {
+p.type-box.ghost, li.type-box.ghost {
   background: #363453;
 }
-p.type-box.grass {
+p.type-box.grass, li.type-box.grass {
   background: #7dc95d;
 }
-p.type-box.ground {
+p.type-box.ground, li.type-box.ground {
   background: #d7bb56;
 }
-p.type-box.ice {
+p.type-box.ice, li.type-box.ice {
   background: #6bb0c3;
 }
-p.type-box.normal {
+p.type-box.normal, li.type-box.normal {
   background: #8b8382;
 }
-p.type-box.poison {
+p.type-box.poison, li.type-box.poison {
   background: #8a567e;
 }
-p.type-box.psychic {
+p.type-box.psychic, li.type-box.psychic {
   background: #d55a86;
 }
-p.type-box.rock {
+p.type-box.rock, li.type-box.rock {
   background: #bfa965;
 }
-p.type-box.water {
+p.type-box.steel, li.type-box.steel {
+  background: #756f73;
+}
+p.type-box.water, li.type-box.water {
   background: #3498f9;
 }
 /*<-- Pkmn types*/

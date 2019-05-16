@@ -41,14 +41,14 @@ window.addEventListener("load", () => {
       element.addEventListener("click", () => {
         showPkmn(window.data.orderingBy(getCurrentArray(), element.getAttribute("value"), element.getAttribute("name")));
       })
-    })
-
-    //Calling function to get our saved actual array
-    const getCurrentArray = () => {
-      return window.currentArray
-    }
+		})
   });
 });
+
+//Calling function to get our saved actual array
+const getCurrentArray = () => {
+  return window.currentArray
+}
 
 let showPkmn = (arr) => {
 	//Calling function to calculate the total number of pkmn showed
@@ -71,11 +71,14 @@ let showPkmn = (arr) => {
 		let pkmnContainer = document.createElement('div');
 		pkmnContainer.classList.add("card");
 		pkmnContainer.classList.add("side");
-		pkmnContainer.classList.add("pkmn-container");
+    pkmnContainer.classList.add("pkmn-container");
 		pkmnContainer.classList.add("col-sm-6");
 		pkmnContainer.classList.add("col-md-6");
 		pkmnContainer.classList.add("col-lg-2");
     pkmnContainer.classList.add("container");
+    pkmnContainer.setAttribute("data-target", "#info-modal");
+    pkmnContainer.setAttribute("data-toggle", "modal");
+    pkmnContainer.setAttribute("value", arr[i].id)
     //Calling names from data
 		let pkmnNameRow = document.createElement("div");
 		pkmnNameRow.classList.add("row");
@@ -125,7 +128,7 @@ let showPkmn = (arr) => {
 		pkmnContainer.appendChild(pkmnTypeRow);
 
     //Creating flip card
-		let backCard = document.createElement('div');
+		/*let backCard = document.createElement('div');
 		backCard.classList.add("side");
 		backCard.classList.add("back")
 		backCard.innerHTML = `<p> ⚖️ Peso: ${arr[i].weight}</p>
@@ -140,7 +143,27 @@ let showPkmn = (arr) => {
 		backCard.appendChild(weaknessList);
 
 		pkmnContainer.appendChild(backCard);
+*/
 		box.appendChild(pkmnContainer);
   }
-  pkmnBoxes.appendChild(box);
+	pkmnBoxes.appendChild(box);
+	//Adding elements to modal
+	let pkmnContainers = document.querySelectorAll("div.pkmn-container");
+	pkmnContainers.forEach(element => {
+		element.addEventListener("click", () => {
+			let pkmnShowed = window.data.getPkmnById(arr, element.getAttribute("value"));
+			document.getElementById("modal-title").innerHTML = pkmnShowed.name;
+			document.getElementById("modal-img").src = pkmnShowed.img;
+			document.getElementById("modal-height").innerHTML = "Altura: "+pkmnShowed.height;
+			document.getElementById("modal-weight").innerHTML = "Peso: "+pkmnShowed.weight;
+			document.getElementById("modal-candy").innerHTML = "Caramelo: "+pkmnShowed.candy;
+			document.getElementById("modal-egg").innerHTML = "Eclosión: "+pkmnShowed.egg;
+			let weaknessList = document.getElementById("modal-weak");
+			weaknessList.innerHTML = " "
+			pkmnShowed.weaknesses.forEach(weak => {
+				let typeClass = weak.toLowerCase()
+				weaknessList.innerHTML += "<li class=\"weakness-list types type-box "+typeClass+"\">"+weak+"</li>";
+			});
+		})
+	})
 }
