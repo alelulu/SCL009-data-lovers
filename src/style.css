@@ -135,6 +135,7 @@ li.info-item {
   list-style: none;
 }
 ul#modal-weak {
+  padding: 0;
   text-align: center;
 }
 li.weakness-list {
