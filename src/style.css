@@ -64,6 +64,9 @@ img#img-banner {
   .close-modal {
     position: absolute
   }
+  body {
+    background-color: #fff27c
+  }
 }
 /*<-- Banner image*/
 
