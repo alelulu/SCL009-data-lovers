@@ -3,21 +3,14 @@
 
 body {
   font-family: 'Signika', sans-serif !important;
-  color: #414a6a !important;
-  background: rgba(71,131,123,1);
-  background: -moz-linear-gradient(top, rgba(71,131,123,1) 0%, rgba(151,232,187,1) 38%, rgba(151,232,187,1) 51%, rgba(151,232,187,1) 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(71,131,123,1)), color-stop(38%, rgba(151,232,187,1)), color-stop(51%, rgba(151,232,187,1)), color-stop(100%, rgba(151,232,187,1)));
-  background: -webkit-linear-gradient(top, rgba(71,131,123,1) 0%, rgba(151,232,187,1) 38%, rgba(151,232,187,1) 51%, rgba(151,232,187,1) 100%);
-  background: -o-linear-gradient(top, rgba(71,131,123,1) 0%, rgba(151,232,187,1) 38%, rgba(151,232,187,1) 51%, rgba(151,232,187,1) 100%);
-  background: -ms-linear-gradient(top, rgba(71,131,123,1) 0%, rgba(151,232,187,1) 38%, rgba(151,232,187,1) 51%, rgba(151,232,187,1) 100%);
-  background: linear-gradient(to bottom, rgba(71,131,123,1) 0%, rgba(151,232,187,1) 38%, rgba(151,232,187,1) 51%, rgba(151,232,187,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#47837b', endColorstr='#97e8bb', GradientType=0 );
+  color: #292929 !important;
+  background-color: #f6e652;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 /*Navbar -->*/
 nav#nav-menu {
-  background-color: rgba(82,138,115,0.95) !important;
+  background-color: #c52018 !important;
   font-size: 18px;
   -webkit-box-shadow: 7px 7px 5px -8px rgba(0,0,0,0.75) !important;
   -moz-box-shadow: 7px 7px 5px -8px rgba(0,0,0,0.75) !important;
@@ -27,20 +20,20 @@ a.a-text {
   color: #ffffff !important;
 }
 a.a-text:hover {
-  color: #d3efd7 !important;
+  color: #fff6a4 !important;
 }
 a#index-text {
   line-height: 0 !important;
 }
 .dropdown-item {
-  color: #d3efd7;
+  color: #fff6a4;
 }  
 .dropdown-item:hover {
-  background-color: #83c396;
+  background-color: #c52018;
   color: #ffffff;
 } 
 div.dropdown-menu {
-  background-color: #33818e;
+  background-color: #e65a41;
 }
 img#logo-pkmn {
   margin-right: 5px;
@@ -68,6 +61,9 @@ img#img-banner {
   img#img-banner {
     display: none;
   }
+  .close-modal {
+    position: absolute
+  }
 }
 /*<-- Banner image*/
 
@@ -86,7 +82,7 @@ img#img-banner {
   width: 100%;
 }
 .pkmn-container:hover {
-  background-color: #33818e !important;
+  background-color: #c52018 !important;
 }
 /*.card:hover {
   transform: rotateY(180deg);
@@ -96,15 +92,15 @@ img#img-banner {
 }
 .pkmn-container {
   color: #ffffff;
-  background-color: rgba(82,138,115,0.9);
+  background-color: #e65a41;
   text-align: center;
   margin: 10px 20px !important;
   padding: 0 !important;
   border-radius: 20px;
   width: 300px;
-  -webkit-box-shadow: 7px 7px 5px -8px rgba(0,0,0,0.75) !important;
-  -moz-box-shadow: 7px 7px 5px -8px rgba(0,0,0,0.75) !important;
-  box-shadow: 7px 7px 5px -8px rgba(0,0,0,0.75) !important;
+  -webkit-box-shadow: 7px 7px 5px -8px #c52018 !important;
+  -moz-box-shadow: 7px 7px 5px -8px #c52018 !important;
+  box-shadow: 7px 7px 5px -8px #c52018 !important;
 }
 h6.pkmn-name {
   font-size: 18px;
@@ -126,7 +122,7 @@ img#pkmn-img {
   width: 100%;
 }
 .card .back {
-  background: #83c396;
+  background: #c52018;
   color: #ffffff;
   line-height: 100px;
   text-align: center;
@@ -147,10 +143,10 @@ div.side ul li {
 
 .modal-backdrop
 {
-    opacity: 0.1 !important;
+    opacity: 0.50 #c52018 !important;
 }
 div.modal-content{
-  background-color: rgba(82,138,115,0.95);
+  background-color: #c52018;
   color: #ffffff;
   border-radius: 20px;
 }
@@ -193,6 +189,7 @@ div.types {
   padding: 0;
 }
 p.type-box, li.type-box{
+  color: #ffffff;
   height: 21px;
   font-size: 14px;
   border-radius: 6px;
@@ -219,6 +216,7 @@ p.type-box.fairy, li.type-box.fairy{
 }
 p.type-box.fighting, li.type-box.fighting{
   background: #b85945;
+  margin-left: 1px
 }
 p.type-box.fire, li.type-box.fire{
   background: #f14730;
@@ -260,7 +258,7 @@ p.type-box.water, li.type-box.water {
 
 /*Footer -->*/
 footer#footer {
-  background-color: rgba(82,138,115,0.95) !important;
+  background-color: #c52018 !important;
   margin-top: 20px;
 }
 div.footer-text{
