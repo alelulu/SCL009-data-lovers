@@ -3,37 +3,39 @@
 
 body {
   font-family: 'Signika', sans-serif !important;
-  color: #292929 !important;
-  background-color: #f6e652;
+  color: #ffee52 !important;
+  background-color: #4d4a49;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 /*Navbar -->*/
 nav#nav-menu {
-  background-color: #c52018 !important;
+  background-color: #ffee52 !important;
   font-size: 18px;
   -webkit-box-shadow: 7px 7px 5px -8px rgba(0,0,0,0.75) !important;
   -moz-box-shadow: 7px 7px 5px -8px rgba(0,0,0,0.75) !important;
   box-shadow: 7px 7px 5px -8px rgba(0,0,0,0.75) !important;
 }
 a.a-text {
-  color: #ffffff !important;
+  color: #297383 !important;
 }
 a.a-text:hover {
-  color: #fff6a4 !important;
+  color: #297383 !important;
+  font-weight: bold;
 }
 a#index-text {
   line-height: 0 !important;
 }
 .dropdown-item {
-  color: #fff6a4;
+  color: #ffee52;
 }  
 .dropdown-item:hover {
-  background-color: #c52018;
-  color: #ffffff;
+  background-color: #ffee52;
+  color: #297383;
+  font-weight: bold;
 } 
 div.dropdown-menu {
-  background-color: #e65a41;
+  background-color: #297383;
 }
 img#logo-pkmn {
   margin-right: 5px;
@@ -80,12 +82,9 @@ img#img-banner {
 .card {
   border-radius: 20px;
   height: 250px;
-  transform-style: preserve-3d;
-  transition: all 1s ease-in-out;
+/*   transform-style: preserve-3d;
+  transition: all 1s ease-in-out; */
   width: 100%;
-}
-.pkmn-container:hover {
-  background-color: #c52018 !important;
 }
 /*.card:hover {
   transform: rotateY(180deg);
@@ -95,15 +94,20 @@ img#img-banner {
 }
 .pkmn-container {
   color: #ffffff;
-  background-color: #e65a41;
+  background-color: #297383;
   text-align: center;
   margin: 10px 20px !important;
   padding: 0 !important;
   border-radius: 20px;
   width: 300px;
-  -webkit-box-shadow: 7px 7px 5px -8px #c52018 !important;
-  -moz-box-shadow: 7px 7px 5px -8px #c52018 !important;
-  box-shadow: 7px 7px 5px -8px #c52018 !important;
+  border-bottom: solid 4px #ffee52;
+  border-right: solid 3px #ffee52
+}
+.pkmn-container:hover {
+  border-top: solid 1px #debd29;
+  border-left: solid 1px #debd29;
+  border-bottom: none;
+  border-right: none
 }
 h6.pkmn-name {
   font-size: 18px;
@@ -125,7 +129,7 @@ img#pkmn-img {
   width: 100%;
 }
 .card .back {
-  background: #c52018;
+  background: #f4cf53;
   color: #ffffff;
   line-height: 100px;
   text-align: center;
@@ -146,11 +150,11 @@ div.side ul li {
 
 .modal-backdrop
 {
-    opacity: 0.50 #c52018 !important;
+    opacity: 0.50 #f4cf53 !important;
 }
 div.modal-content{
-  background-color: #c52018;
-  color: #ffffff;
+  background-color: #f4cf53;
+  color: #297383;
   border-radius: 20px;
 }
 h4#modal-title {
@@ -261,7 +265,7 @@ p.type-box.water, li.type-box.water {
 
 /*Footer -->*/
 footer#footer {
-  background-color: #c52018 !important;
+  background-color: #ffee52 !important;
   margin-top: 20px;
 }
 div.footer-text{
@@ -270,6 +274,6 @@ div.footer-text{
 }
 p#footer-text {
   padding-top: 15px;
-  color: #ffffff;
+  color: #297383;
 }
 /*<-- Footer*/
