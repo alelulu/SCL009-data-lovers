@@ -3,39 +3,39 @@
 
 body {
   font-family: 'Signika', sans-serif !important;
-  color: #ffee52 !important;
-  background-color: #4d4a49;
+  color: #f4cf53 !important;
+  background-color: #313962;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 /*Navbar -->*/
 nav#nav-menu {
-  background-color: #ffee52 !important;
+  background-color: #f4cf53 !important;
   font-size: 18px;
   -webkit-box-shadow: 7px 7px 5px -8px rgba(0,0,0,0.75) !important;
   -moz-box-shadow: 7px 7px 5px -8px rgba(0,0,0,0.75) !important;
   box-shadow: 7px 7px 5px -8px rgba(0,0,0,0.75) !important;
 }
 a.a-text {
-  color: #297383 !important;
+  color: #313962 !important;
 }
 a.a-text:hover {
-  color: #297383 !important;
+  color: #313962 !important;
   font-weight: bold;
 }
 a#index-text {
   line-height: 0 !important;
 }
 .dropdown-item {
-  color: #ffee52;
+  color: #f4cf53;
 }  
 .dropdown-item:hover {
-  background-color: #ffee52;
-  color: #297383;
+  background-color: #f4cf53;
+  color: #313962;
   font-weight: bold;
 } 
 div.dropdown-menu {
-  background-color: #297383;
+  background-color: #313962;
 }
 img#logo-pkmn {
   margin-right: 5px;
@@ -79,8 +79,8 @@ img#img-banner {
 .card {
   border-radius: 20px;
   height: 250px;
-/*   transform-style: preserve-3d;
-  transition: all 1s ease-in-out; */
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
   width: 100%;
 }
 /*.card:hover {
@@ -90,21 +90,20 @@ img#img-banner {
   height: 10px;
 }
 .pkmn-container {
-  color: #ffffff;
-  background-color: #297383;
+  color: #313962;
+  background-color: #f4cf53;
   text-align: center;
   margin: 10px 20px !important;
   padding: 0 !important;
   border-radius: 20px;
   width: 300px;
-  border-bottom: solid 4px #ffee52;
-  border-right: solid 3px #ffee52
+  border-bottom: solid 2px #333333;
+  border-right: solid 2px #333333
 }
 .pkmn-container:hover {
-  border-top: solid 1px #debd29;
-  border-left: solid 1px #debd29;
-  border-bottom: none;
-  border-right: none
+/*   border-top: solid 1px #debd29;
+  border-left: solid 1px #debd29; */
+  background-color: #ebbd26
 }
 h6.pkmn-name {
   font-size: 18px;
@@ -151,7 +150,7 @@ div.side ul li {
 }
 div.modal-content{
   background-color: #f4cf53;
-  color: #297383;
+  color: #313962;
   border-radius: 20px;
 }
 h4#modal-title {
@@ -262,7 +261,7 @@ p.type-box.water, li.type-box.water {
 
 /*Footer -->*/
 footer#footer {
-  background-color: #ffee52 !important;
+  background-color: #f4cf53 !important;
   margin-top: 20px;
 }
 div.footer-text{
@@ -271,6 +270,6 @@ div.footer-text{
 }
 p#footer-text {
   padding-top: 15px;
-  color: #297383;
+  color: #313962;
 }
 /*<-- Footer*/
